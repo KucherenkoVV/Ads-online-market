@@ -14,10 +14,8 @@
 ## Техническое задание проекта:
 [Техническое задание](https://skyengpublic.notion.site/64113e0a2641475c9ad9bea93144afff)
 
-## Комада разработчиков "SEVEN":
+## Разработчик team "SEVEN":
 [Кучеренко Виталий](https://github.com/KucherenkoVV/)
-
-[Иванов Антон](https://github.com/Lycanthropewolf)
 
 ## Стек технологий:
 
