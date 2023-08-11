@@ -8,7 +8,8 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import ru.skypro.homework.dto.UserDto;
+import ru.skypro.homework.dto.auth.NewPassword;
+import ru.skypro.homework.dto.user.UserDto;
 
 @RestController
 @RequestMapping("/users")
