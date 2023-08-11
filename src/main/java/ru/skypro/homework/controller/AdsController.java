@@ -5,17 +5,12 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import ru.skypro.homework.dto.ads.AdDTO;
 
-import javax.validation.Valid;
-import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -33,13 +28,13 @@ public class AdsController {
                     @ApiResponse(
                             responseCode = "200", description = "OK",
                             content = {@Content(mediaType = "application/json",
-                                        schema = @Schema(implementation = AdsDto.class))})
+                                        schema = @Schema(implementation = AdDTO.class))})
                 }
     )
     @GetMapping
-    public AdsDto getAllAds() {
+    public AdDTO getAllAds() {
         System.out.println("Все объявления получены.");
-        return new AdsDto();
+        return new AdDTO();
     }
 
     @Operation(
@@ -48,15 +43,15 @@ public class AdsController {
                     @ApiResponse(
                             responseCode = "201", description = "Created",
                             content = {@Content(mediaType = "application/json",
-                                        schema = @Schema(implementation = AdsDto.class))}),
+                                        schema = @Schema(implementation = AdDTO.class))}),
                     @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content)
             }
     )
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public AdsDto addAds(@RequestPart("image") MultipartFile multipartFile,
-                                         @RequestBody AdsDto adsDto) {
+    public AdDTO addAds(@RequestPart("image") MultipartFile multipartFile,
+                        @RequestBody AdDTO adsDto) {
         System.out.println("Объявление добавлено");
-        return new AdsDto();
+        return new AdDTO();
     }
 
     @Operation(
@@ -65,13 +60,13 @@ public class AdsController {
                     @ApiResponse(
                             responseCode = "200", description = "OK",
                             content = {@Content(mediaType = "application/json",
-                                        schema = @Schema(implementation = AdsDto.class))})
+                                        schema = @Schema(implementation = AdDTO.class))})
             }
     )
     @GetMapping("/{id}")
-    public AdsDto getFullAd(@PathVariable("id") Integer id) {
+    public AdDTO getFullAd(@PathVariable("id") Integer id) {
         System.out.println("Объявление получено по id");
-        return new AdsDto();
+        return new AdDTO();
     }
 
     @Operation(
@@ -95,7 +90,7 @@ public class AdsController {
                     @ApiResponse(
                             responseCode = "200", description = "OK",
                             content = {@Content(mediaType = "application/json",
-                                        schema = @Schema(implementation = AdsDto.class))}),
+                                        schema = @Schema(implementation = AdDTO.class))}),
             @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content),
             @ApiResponse(responseCode = "403", description = "Forbidden", content = @Content),
             @ApiResponse(responseCode = "404", description = "Not found", content = @Content)
@@ -103,9 +98,9 @@ public class AdsController {
     )
     @PatchMapping("/{id}")
     public void updateAds(@PathVariable("id") Integer id,
-                                            @RequestBody AdsDto adsDto) {
+                                            @RequestBody AdDTO adsDto) {
 
-        return new AdsDto();
+        System.out.println("Информация об объявлении обновлена.");
     }
 
     @Operation(
@@ -114,14 +109,14 @@ public class AdsController {
                     @ApiResponse(
                             responseCode = "200", description = "OK",
                             content = {@Content(mediaType = "application/json",
-                                    schema = @Schema(implementation = AdsDto.class))}),
+                                    schema = @Schema(implementation = AdDTO.class))}),
                     @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content)
             }
     )
     @GetMapping("/me")
-    public List<AdsDto> getAdsMe() {
+    public List<AdDTO> getAdsMe() {
         System.out.println("Получены объявления авторизованного пользователя");
-        return new List<AdsDto>();
+        return new ArrayList<AdDTO>();
     }
 
     @Operation(
