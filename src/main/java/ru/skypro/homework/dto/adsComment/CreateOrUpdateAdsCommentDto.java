@@ -3,6 +3,6 @@ package ru.skypro.homework.dto.adsComment;
 import lombok.Data;
 
 @Data
-public class CreateOrUpdateAdsCommentDTO {
+public class CreateOrUpdateAdsCommentDto {
     private String text;
 }

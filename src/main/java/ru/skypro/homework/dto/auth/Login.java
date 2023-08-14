@@ -1,8 +1,10 @@
 package ru.skypro.homework.dto.auth;
 
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@RequiredArgsConstructor
 public class Login {
 
     private String username;

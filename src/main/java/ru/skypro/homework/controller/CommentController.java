@@ -6,7 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.*;
-import ru.skypro.homework.dto.adsComment.AdsCommentDTO;
+import ru.skypro.homework.dto.adsComment.AdsCommentDto;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,9 +28,9 @@ public class CommentController {
         }
 )
     @GetMapping("/{id}/comments")
-    public List<AdsCommentDTO> getComments(@PathVariable("id") Integer id) {
+    public List<AdsCommentDto> getComments(@PathVariable("id") Integer id) {
     System.out.println("Выведен список объявлений");
-        return new ArrayList<AdsCommentDTO>();
+        return new ArrayList<AdsCommentDto>();
     }
 
     @Operation(
@@ -38,16 +38,16 @@ public class CommentController {
             responses = {
                     @ApiResponse(responseCode = "200", description = "OK",
                             content = {@Content(mediaType = "application/json",
-                                        schema = @Schema(implementation = AdsCommentDTO.class))}),
+                                        schema = @Schema(implementation = AdsCommentDto.class))}),
                     @ApiResponse(responseCode = "401", description = "Unauthorized", content = @Content),
                     @ApiResponse(responseCode = "404", description = "Not Found", content = @Content)
             }
     )
     @PostMapping("/{id}/comments")
-    public AdsCommentDTO addAdsComment(@PathVariable("id") Integer id,
-                                                       @RequestBody AdsCommentDTO adsCommentDto) {
+    public AdsCommentDto addAdsComment(@PathVariable("id") Integer id,
+                                       @RequestBody AdsCommentDto adsCommentDto) {
         System.out.println("Комментарий добавлен");
-        return new AdsCommentDTO();
+        return new AdsCommentDto();
     }
 
     @Operation(
@@ -70,18 +70,18 @@ public class CommentController {
             responses = {
                     @ApiResponse(responseCode = "200", description = "OK",
                             content = {@Content(mediaType = "application/json",
-                                        schema = @Schema(implementation = AdsCommentDTO.class))}),
+                                        schema = @Schema(implementation = AdsCommentDto.class))}),
                     @ApiResponse(responseCode = "401", description = "Unauthorized", content = @Content),
                     @ApiResponse(responseCode = "403", description = "Forbidden", content = @Content),
                     @ApiResponse(responseCode = "404", description = "Not Found", content = @Content)
             }
     )
     @PatchMapping("/{adId}/comments/{commentId}")
-    public AdsCommentDTO updateComments(@PathVariable("adId") Integer adId,
-                                                        @PathVariable("commentId") Integer commentId,
-                                                        @RequestBody AdsCommentDTO adsCommentDto) {
+    public AdsCommentDto updateComments(@PathVariable("adId") Integer adId,
+                                        @PathVariable("commentId") Integer commentId,
+                                        @RequestBody AdsCommentDto adsCommentDto) {
         System.out.println("Комментарий обновлен");
-        return new AdsCommentDTO();
+        return new AdsCommentDto();
     }
 
 }

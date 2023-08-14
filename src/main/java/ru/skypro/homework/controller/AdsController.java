@@ -8,7 +8,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import ru.skypro.homework.dto.ads.AdDTO;
+import ru.skypro.homework.dto.ads.AdDto;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,13 +28,13 @@ public class AdsController {
                     @ApiResponse(
                             responseCode = "200", description = "OK",
                             content = {@Content(mediaType = "application/json",
-                                        schema = @Schema(implementation = AdDTO.class))})
+                                        schema = @Schema(implementation = AdDto.class))})
                 }
     )
     @GetMapping
-    public AdDTO getAllAds() {
+    public AdDto getAllAds() {
         System.out.println("Все объявления получены.");
-        return new AdDTO();
+        return new AdDto();
     }
 
     @Operation(
@@ -43,15 +43,15 @@ public class AdsController {
                     @ApiResponse(
                             responseCode = "201", description = "Created",
                             content = {@Content(mediaType = "application/json",
-                                        schema = @Schema(implementation = AdDTO.class))}),
+                                        schema = @Schema(implementation = AdDto.class))}),
                     @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content)
             }
     )
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public AdDTO addAds(@RequestPart("image") MultipartFile multipartFile,
-                        @RequestBody AdDTO adsDto) {
+    public AdDto addAds(@RequestPart("image") MultipartFile multipartFile,
+                        @RequestBody AdDto adsDto) {
         System.out.println("Объявление добавлено");
-        return new AdDTO();
+        return new AdDto();
     }
 
     @Operation(
@@ -60,13 +60,13 @@ public class AdsController {
                     @ApiResponse(
                             responseCode = "200", description = "OK",
                             content = {@Content(mediaType = "application/json",
-                                        schema = @Schema(implementation = AdDTO.class))})
+                                        schema = @Schema(implementation = AdDto.class))})
             }
     )
     @GetMapping("/{id}")
-    public AdDTO getFullAd(@PathVariable("id") Integer id) {
+    public AdDto getFullAd(@PathVariable("id") Integer id) {
         System.out.println("Объявление получено по id");
-        return new AdDTO();
+        return new AdDto();
     }
 
     @Operation(
@@ -90,7 +90,7 @@ public class AdsController {
                     @ApiResponse(
                             responseCode = "200", description = "OK",
                             content = {@Content(mediaType = "application/json",
-                                        schema = @Schema(implementation = AdDTO.class))}),
+                                        schema = @Schema(implementation = AdDto.class))}),
             @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content),
             @ApiResponse(responseCode = "403", description = "Forbidden", content = @Content),
             @ApiResponse(responseCode = "404", description = "Not found", content = @Content)
@@ -98,7 +98,7 @@ public class AdsController {
     )
     @PatchMapping("/{id}")
     public void updateAds(@PathVariable("id") Integer id,
-                                            @RequestBody AdDTO adsDto) {
+                                            @RequestBody AdDto adsDto) {
 
         System.out.println("Информация об объявлении обновлена.");
     }
@@ -109,14 +109,14 @@ public class AdsController {
                     @ApiResponse(
                             responseCode = "200", description = "OK",
                             content = {@Content(mediaType = "application/json",
-                                    schema = @Schema(implementation = AdDTO.class))}),
+                                    schema = @Schema(implementation = AdDto.class))}),
                     @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content)
             }
     )
     @GetMapping("/me")
-    public List<AdDTO> getAdsMe() {
+    public List<AdDto> getAdsMe() {
         System.out.println("Получены объявления авторизованного пользователя");
-        return new ArrayList<AdDTO>();
+        return new ArrayList<AdDto>();
     }
 
     @Operation(
