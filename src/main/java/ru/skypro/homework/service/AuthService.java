@@ -1,5 +1,6 @@
 package ru.skypro.homework.service;
 
+import ru.skypro.homework.dto.auth.Login;
 import ru.skypro.homework.dto.auth.Register;
 
 public interface AuthService {

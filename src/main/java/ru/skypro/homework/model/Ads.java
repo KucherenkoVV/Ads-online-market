@@ -18,16 +18,27 @@ public class Ads {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Integer id;
+
     @NotNull
+    @Column(name = "title")
     private String title;
+
+    @Column(name ="description")
     private String description;
+
     @NotNull
+    @Column(name = "price")
     private Integer price;
+
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "author_id")
     private User author;
-    @OneToOne(cascade = CascadeType.ALL)
-    private Image image;
+
+    @Column(name = "image")
+    private String image;
+
     @JsonIgnore
     @OneToMany(mappedBy = "ads", cascade = CascadeType.ALL)
     private List<Comment> comments;
