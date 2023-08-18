@@ -23,7 +23,7 @@ public class UpdateUserDto {
 
     @Pattern
             (
-                    regexp = "^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$"
+                    regexp = "(\\+)?(7|8)?\\d{10}"
             )
     private String phone;
 }

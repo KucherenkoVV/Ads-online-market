@@ -5,10 +5,22 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import ru.skypro.homework.dto.ads.AdDto;
+import ru.skypro.homework.dto.ads.CreateOrUpdateAdDto;
+import ru.skypro.homework.dto.ads.ListAdsDto;
+import ru.skypro.homework.mapper.AdsMapper;
+import ru.skypro.homework.service.AdsService;
+import ru.skypro.homework.service.impl.AdsServiceImpl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +32,11 @@ import java.util.List;
 @Tag(name = "Объявления")
 public class AdsController {
 
-    //Первоначально стоят загрушки в методах, потом будет изменено на ResponseEntity
+    private final AdsServiceImpl adsService;
+
+    public AdsController(AdsServiceImpl adsService) {
+        this.adsService = adsService;
+    }
 
     @Operation(
             summary = "Полуение всех объявлений", tags = "Объявления",
@@ -28,13 +44,21 @@ public class AdsController {
                     @ApiResponse(
                             responseCode = "200", description = "OK",
                             content = {@Content(mediaType = "application/json",
-                                        schema = @Schema(implementation = AdDto.class))})
-                }
+                                    schema = @Schema(implementation = AdDto.class))})
+            }
     )
     @GetMapping
-    public AdDto getAllAds() {
-        System.out.println("Все объявления получены.");
-        return new AdDto();
+    public ResponseEntity<ListAdsDto> getAllAds() {
+
+        List<AdDto> list = adsService.getAllAds();
+        ListAdsDto listAdsDto = null;
+        if (list == null) {
+            return ResponseEntity.notFound().build();
+        } else {
+            listAdsDto.setResults(list);
+            listAdsDto.setCount(list.size());
+            return ResponseEntity.ok(listAdsDto);
+        }
     }
 
     @Operation(
@@ -43,15 +67,15 @@ public class AdsController {
                     @ApiResponse(
                             responseCode = "201", description = "Created",
                             content = {@Content(mediaType = "application/json",
-                                        schema = @Schema(implementation = AdDto.class))}),
+                                    schema = @Schema(implementation = AdDto.class))}),
                     @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content)
             }
     )
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public AdDto addAds(@RequestPart("image") MultipartFile multipartFile,
-                        @RequestBody AdDto adsDto) {
-        System.out.println("Объявление добавлено");
-        return new AdDto();
+    public ResponseEntity<AdDto> addAds(@RequestPart("image") MultipartFile multipartFile,
+                                        @RequestBody AdDto adsDto, Authentication authentication) {
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(adsService.addNewAd(multipartFile, adsDto, authentication));
     }
 
     @Operation(
@@ -60,13 +84,13 @@ public class AdsController {
                     @ApiResponse(
                             responseCode = "200", description = "OK",
                             content = {@Content(mediaType = "application/json",
-                                        schema = @Schema(implementation = AdDto.class))})
+                                    schema = @Schema(implementation = AdDto.class))})
             }
     )
     @GetMapping("/{id}")
-    public AdDto getFullAd(@PathVariable("id") Integer id) {
-        System.out.println("Объявление получено по id");
-        return new AdDto();
+    public ResponseEntity<AdDto> getFullAd(@PathVariable("id") Integer id) {
+
+        return ResponseEntity.ok(adsService.getAdFromId(id));
     }
 
     @Operation(
@@ -80,27 +104,29 @@ public class AdsController {
             }
     )
     @DeleteMapping("/{id}")
-    public void removeAds(@PathVariable("id") Integer id) {
-        System.out.println("Объявление удалено");
+    public ResponseEntity<?> removeAd(@PathVariable("id") Integer id) {
+
+        adsService.removeAdById(id);
+        return ResponseEntity.ok().build();
     }
 
     @Operation(
-            summary = "Обновление информации об объявлении",tags = "Объявления",
+            summary = "Обновление информации об объявлении", tags = "Объявления",
             responses = {
                     @ApiResponse(
                             responseCode = "200", description = "OK",
                             content = {@Content(mediaType = "application/json",
-                                        schema = @Schema(implementation = AdDto.class))}),
-            @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content),
-            @ApiResponse(responseCode = "403", description = "Forbidden", content = @Content),
-            @ApiResponse(responseCode = "404", description = "Not found", content = @Content)
-        }
+                                    schema = @Schema(implementation = AdDto.class))}),
+                    @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content),
+                    @ApiResponse(responseCode = "403", description = "Forbidden", content = @Content),
+                    @ApiResponse(responseCode = "404", description = "Not found", content = @Content)
+            }
     )
     @PatchMapping("/{id}")
-    public void updateAds(@PathVariable("id") Integer id,
-                                            @RequestBody AdDto adsDto) {
+    public ResponseEntity<CreateOrUpdateAdDto> updateAds(@PathVariable("id") Integer id,
+                                                         @RequestBody CreateOrUpdateAdDto createOrUpdateAdDto) {
 
-        System.out.println("Информация об объявлении обновлена.");
+        return ResponseEntity.ok(adsService.updateAd(id, createOrUpdateAdDto));
     }
 
     @Operation(
@@ -114,17 +140,17 @@ public class AdsController {
             }
     )
     @GetMapping("/me")
-    public List<AdDto> getAdsMe() {
-        System.out.println("Получены объявления авторизованного пользователя");
-        return new ArrayList<AdDto>();
+    public ListAdsDto getAdsMe(Authentication authentication) {
+
+        return adsService.getAdsMe(authentication);
     }
 
     @Operation(
-            summary = "Обновление картинки объявления",tags = "Объявления",
+            summary = "Обновление картинки объявления", tags = "Объявления",
             responses = {
                     @ApiResponse(
                             responseCode = "200", description = "OK",
-                            content = { @Content(mediaType = "application/octet-stream")}),
+                            content = {@Content(mediaType = "application/octet-stream")}),
                     @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content),
                     @ApiResponse(responseCode = "403", description = "Forbidden", content = @Content),
                     @ApiResponse(responseCode = "404", description = "Not found", content = @Content)
@@ -132,7 +158,8 @@ public class AdsController {
     )
     @PatchMapping(value = "/{id}/image", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public void updateAdsImage(@PathVariable("id") Integer id,
-                                            @RequestPart("image") MultipartFile multipartFile) {
-        System.out.println("Изменена картинка объявления");
+                               @RequestPart("image") MultipartFile multipartFile) {
+
+        adsService.updateAdImage(id, multipartFile);
     }
 }

@@ -1,50 +1,729 @@
-2023-08-13 11:14:11.603  INFO 5252 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 5252 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
-2023-08-13 11:14:11.612  INFO 5252 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-08-13 11:14:14.939  INFO 5252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-08-13 11:14:14.962  INFO 5252 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-08-13 11:14:14.963  INFO 5252 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
-2023-08-13 11:14:15.361  INFO 5252 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-08-13 11:14:15.362  INFO 5252 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3632 ms
-2023-08-13 11:14:17.300  INFO 5252 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@592ca48c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5fed9976, org.springframework.security.web.context.SecurityContextPersistenceFilter@3b7c58e7, org.springframework.security.web.header.HeaderWriterFilter@184823ed, org.springframework.web.filter.CorsFilter@3fdcde7a, org.springframework.security.web.authentication.logout.LogoutFilter@487cd177, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@382dc417, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6371cf2f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@553d2579, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4f363abd, org.springframework.security.web.session.SessionManagementFilter@35eee641, org.springframework.security.web.access.ExceptionTranslationFilter@2bb62414, org.springframework.security.web.access.intercept.AuthorizationFilter@4f1fb828]
-2023-08-13 11:14:17.713  INFO 5252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-08-13 11:14:17.738  INFO 5252 --- [main] ru.skypro.homework.HomeworkApplication   : Started HomeworkApplication in 7.432 seconds (JVM running for 9.912)
-2023-08-13 11:27:59.802  INFO 4528 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 4528 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
-2023-08-13 11:27:59.808  INFO 4528 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-08-13 11:28:03.531  INFO 4528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-08-13 11:28:03.566  INFO 4528 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-08-13 11:28:03.568  INFO 4528 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
-2023-08-13 11:28:04.157  INFO 4528 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-08-13 11:28:04.158  INFO 4528 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4237 ms
-2023-08-13 11:28:07.255  INFO 4528 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@382dc417, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3daf03d8, org.springframework.security.web.context.SecurityContextPersistenceFilter@7aaad0, org.springframework.security.web.header.HeaderWriterFilter@7243145f, org.springframework.web.filter.CorsFilter@510689af, org.springframework.security.web.authentication.logout.LogoutFilter@65be88ae, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7197b07f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@10f477e2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@64518270, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2415e4c7, org.springframework.security.web.session.SessionManagementFilter@794eeaf8, org.springframework.security.web.access.ExceptionTranslationFilter@19dc0d32, org.springframework.security.web.access.intercept.AuthorizationFilter@487cd177]
-2023-08-13 11:28:07.890  INFO 4528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-08-13 11:28:07.912  INFO 4528 --- [main] ru.skypro.homework.HomeworkApplication   : Started HomeworkApplication in 9.418 seconds (JVM running for 12.809)
-2023-08-13 11:30:21.177  INFO 3056 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 3056 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
-2023-08-13 11:30:21.186  INFO 3056 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-08-13 11:30:24.224  INFO 3056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-08-13 11:30:24.247  INFO 3056 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-08-13 11:30:24.249  INFO 3056 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
-2023-08-13 11:30:24.610  INFO 3056 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-08-13 11:30:24.611  INFO 3056 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3315 ms
-2023-08-13 11:30:26.848  INFO 3056 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@521441d5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@592ca48c, org.springframework.security.web.context.SecurityContextPersistenceFilter@64518270, org.springframework.security.web.header.HeaderWriterFilter@2443135, org.springframework.web.filter.CorsFilter@5fed9976, org.springframework.security.web.authentication.logout.LogoutFilter@738a5848, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@33a8c9c9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79627d27, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38588dea, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3fdcde7a, org.springframework.security.web.session.SessionManagementFilter@6097fca9, org.springframework.security.web.access.ExceptionTranslationFilter@5927f904, org.springframework.security.web.access.intercept.AuthorizationFilter@ccd341d]
-2023-08-13 11:30:27.370  INFO 3056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-08-13 11:30:27.429  INFO 3056 --- [main] ru.skypro.homework.HomeworkApplication   : Started HomeworkApplication in 7.268 seconds (JVM running for 9.595)
-2023-08-13 11:34:17.169  INFO 6552 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 6552 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
-2023-08-13 11:34:17.184  INFO 6552 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-08-13 11:34:19.947  INFO 6552 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-08-13 11:34:19.970  INFO 6552 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-08-13 11:34:19.972  INFO 6552 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
-2023-08-13 11:34:20.279  INFO 6552 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-08-13 11:34:20.280  INFO 6552 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2969 ms
-2023-08-13 11:34:22.573  INFO 6552 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5fed9976, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3fdcde7a, org.springframework.security.web.context.SecurityContextPersistenceFilter@79627d27, org.springframework.security.web.header.HeaderWriterFilter@30bbcf91, org.springframework.web.filter.CorsFilter@4f363abd, org.springframework.security.web.authentication.logout.LogoutFilter@324b6a56, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3daf03d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b5b9333, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a8f6e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7302ff13, org.springframework.security.web.session.SessionManagementFilter@5729b410, org.springframework.security.web.access.ExceptionTranslationFilter@413d2cd1, org.springframework.security.web.access.intercept.AuthorizationFilter@6ee5f485]
-2023-08-13 11:34:23.420  INFO 6552 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-08-13 11:34:23.455  INFO 6552 --- [main] ru.skypro.homework.HomeworkApplication   : Started HomeworkApplication in 7.264 seconds (JVM running for 9.422)
-2023-08-13 11:50:14.529  INFO 3292 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 3292 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
-2023-08-13 11:50:14.541  INFO 3292 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-08-13 11:50:21.231  INFO 3292 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-08-13 11:50:21.283  INFO 3292 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-08-13 11:50:21.289  INFO 3292 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
-2023-08-13 11:50:22.025  INFO 3292 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-08-13 11:50:22.025  INFO 3292 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7226 ms
-2023-08-13 11:50:26.691  INFO 3292 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5fed9976, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3fdcde7a, org.springframework.security.web.context.SecurityContextPersistenceFilter@79627d27, org.springframework.security.web.header.HeaderWriterFilter@30bbcf91, org.springframework.web.filter.CorsFilter@4f363abd, org.springframework.security.web.authentication.logout.LogoutFilter@324b6a56, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3daf03d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b5b9333, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a8f6e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7302ff13, org.springframework.security.web.session.SessionManagementFilter@5729b410, org.springframework.security.web.access.ExceptionTranslationFilter@413d2cd1, org.springframework.security.web.access.intercept.AuthorizationFilter@6ee5f485]
-2023-08-13 11:50:27.877  INFO 3292 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-08-13 11:50:27.949  INFO 3292 --- [main] ru.skypro.homework.HomeworkApplication   : Started HomeworkApplication in 15.807 seconds (JVM running for 20.389)
+2023-08-18 12:04:41.331  INFO 856 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 856 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 12:04:41.356  INFO 856 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 12:04:45.333  INFO 856 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 12:04:45.362  INFO 856 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 12:04:45.363  INFO 856 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 12:04:45.883  INFO 856 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 12:04:45.887  INFO 856 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4346 ms
+2023-08-18 12:04:46.142  WARN 856 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.service.AdsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 12:04:46.142  INFO 856 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 12:04:46.202  INFO 856 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 12:04:46.309 ERROR 856 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in ru.skypro.homework.controller.AdsController required a bean of type 'ru.skypro.homework.service.AdsService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.service.AdsService' in your configuration.
+
+2023-08-18 12:06:34.702  INFO 3976 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 3976 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 12:06:34.710  INFO 3976 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 12:06:37.510  INFO 3976 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 12:06:37.533  INFO 3976 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 12:06:37.534  INFO 3976 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 12:06:37.906  INFO 3976 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 12:06:37.909  INFO 3976 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3018 ms
+2023-08-18 12:06:38.047  WARN 3976 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.service.AdsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 12:06:38.055  INFO 3976 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 12:06:38.091  INFO 3976 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 12:06:38.217 ERROR 3976 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in ru.skypro.homework.controller.AdsController required a bean of type 'ru.skypro.homework.service.AdsService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.service.AdsService' in your configuration.
+
+2023-08-18 12:10:14.730  INFO 8448 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 8448 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 12:10:14.736  INFO 8448 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 12:10:17.404  INFO 8448 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 12:10:17.430  INFO 8448 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 12:10:17.432  INFO 8448 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 12:10:17.754  INFO 8448 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 12:10:17.754  INFO 8448 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2854 ms
+2023-08-18 12:10:17.882  WARN 8448 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.service.impl.AdsServiceImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 12:10:17.888  INFO 8448 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 12:10:17.928  INFO 8448 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 12:10:18.115 ERROR 8448 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in ru.skypro.homework.controller.AdsController required a bean of type 'ru.skypro.homework.service.impl.AdsServiceImpl' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.service.impl.AdsServiceImpl' in your configuration.
+
+2023-08-18 12:14:47.735  INFO 7000 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 7000 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 12:14:47.740  INFO 7000 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 12:14:50.394  INFO 7000 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 12:14:50.412  INFO 7000 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 12:14:50.413  INFO 7000 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 12:14:50.725  INFO 7000 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 12:14:50.727  INFO 7000 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2851 ms
+2023-08-18 12:14:50.868  WARN 7000 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.service.AdsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 12:14:50.872  INFO 7000 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 12:14:50.907  INFO 7000 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 12:14:51.007 ERROR 7000 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in ru.skypro.homework.controller.AdsController required a bean of type 'ru.skypro.homework.service.AdsService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.service.AdsService' in your configuration.
+
+2023-08-18 12:15:31.770  INFO 5100 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 5100 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 12:15:31.777  INFO 5100 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 12:15:34.332  INFO 5100 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 12:15:34.353  INFO 5100 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 12:15:34.355  INFO 5100 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 12:15:34.650  INFO 5100 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 12:15:34.651  INFO 5100 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2751 ms
+2023-08-18 12:15:34.797  WARN 5100 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.service.AdsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 12:15:34.804  INFO 5100 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 12:15:34.843  INFO 5100 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 12:15:34.963 ERROR 5100 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in ru.skypro.homework.controller.AdsController required a bean of type 'ru.skypro.homework.service.AdsService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.service.AdsService' in your configuration.
+
+2023-08-18 12:49:37.448  INFO 6344 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 6344 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 12:49:37.453  INFO 6344 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 12:49:40.114  INFO 6344 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 12:49:40.132  INFO 6344 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 12:49:40.133  INFO 6344 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 12:49:40.448  INFO 6344 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 12:49:40.448  INFO 6344 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2873 ms
+2023-08-18 12:49:40.588  WARN 6344 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.service.AdsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 12:49:40.594  INFO 6344 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 12:49:40.629  INFO 6344 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 12:49:40.690 ERROR 6344 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in ru.skypro.homework.controller.AdsController required a bean of type 'ru.skypro.homework.service.AdsService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.service.AdsService' in your configuration.
+
+2023-08-18 12:50:20.996  INFO 8584 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 8584 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 12:50:21.004  INFO 8584 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 12:50:23.630  INFO 8584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 12:50:23.646  INFO 8584 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 12:50:23.647  INFO 8584 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 12:50:23.971  INFO 8584 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 12:50:23.972  INFO 8584 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2830 ms
+2023-08-18 12:50:24.112  WARN 8584 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.service.AdsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 12:50:24.118  INFO 8584 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 12:50:24.148  INFO 8584 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 12:50:24.208 ERROR 8584 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in ru.skypro.homework.controller.AdsController required a bean of type 'ru.skypro.homework.service.AdsService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.service.AdsService' in your configuration.
+
+2023-08-18 13:47:30.715  INFO 2824 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 2824 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 13:47:30.722  INFO 2824 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 13:47:33.350  INFO 2824 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 13:47:33.369  INFO 2824 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 13:47:33.371  INFO 2824 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 13:47:33.688  INFO 2824 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 13:47:33.689  INFO 2824 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2857 ms
+2023-08-18 13:47:33.819  WARN 2824 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\AdsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 13:47:33.825  INFO 2824 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 13:47:33.861  INFO 2824 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 13:47:33.921 ERROR 2824 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.skypro.homework.service.impl.AdsServiceImpl required a bean of type 'ru.skypro.homework.service.UserService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.service.UserService' in your configuration.
+
+2023-08-18 13:48:47.193  INFO 7768 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 7768 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 13:48:47.200  INFO 7768 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 13:48:49.901  INFO 7768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 13:48:49.918  INFO 7768 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 13:48:49.919  INFO 7768 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 13:48:50.186  INFO 7768 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 13:48:50.187  INFO 7768 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2840 ms
+2023-08-18 13:48:50.326  WARN 7768 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\AdsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 13:48:50.334  INFO 7768 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 13:48:50.383  INFO 7768 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 13:48:50.486 ERROR 7768 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.skypro.homework.service.impl.UserServiceImpl required a bean of type 'ru.skypro.homework.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.repository.UserRepository' in your configuration.
+
+2023-08-18 13:56:38.750  INFO 8448 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 8448 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 13:56:38.757  INFO 8448 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 13:56:41.421  INFO 8448 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 13:56:41.440  INFO 8448 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 13:56:41.441  INFO 8448 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 13:56:41.717  INFO 8448 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 13:56:41.718  INFO 8448 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2808 ms
+2023-08-18 13:56:41.894  WARN 8448 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\AdsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 13:56:41.903  INFO 8448 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 13:56:41.947  INFO 8448 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 13:56:42.029 ERROR 8448 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.skypro.homework.service.impl.UserServiceImpl required a bean of type 'ru.skypro.homework.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.repository.UserRepository' in your configuration.
+
+2023-08-18 15:10:56.379  INFO 2944 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 2944 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 15:10:56.387  INFO 2944 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 15:10:59.859  INFO 2944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 15:10:59.879  INFO 2944 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 15:10:59.880  INFO 2944 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 15:11:00.306  INFO 2944 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 15:11:00.307  INFO 2944 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3667 ms
+2023-08-18 15:11:00.464  WARN 2944 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\AdsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 15:11:00.471  INFO 2944 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 15:11:00.589  INFO 2944 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 15:11:00.696 ERROR 2944 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.skypro.homework.service.impl.UserServiceImpl required a bean of type 'ru.skypro.homework.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.repository.UserRepository' in your configuration.
+
+2023-08-18 15:14:46.554  INFO 6224 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 6224 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 15:14:46.563  INFO 6224 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 15:14:49.283  INFO 6224 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 15:14:49.300  INFO 6224 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 15:14:49.303  INFO 6224 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 15:14:49.575  INFO 6224 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 15:14:49.576  INFO 6224 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2825 ms
+2023-08-18 15:14:49.752  WARN 6224 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\AdsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 15:14:49.757  INFO 6224 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 15:14:49.798  INFO 6224 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 15:14:49.895 ERROR 6224 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.skypro.homework.service.impl.UserServiceImpl required a bean of type 'ru.skypro.homework.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.repository.UserRepository' in your configuration.
+
+2023-08-18 16:11:02.627  INFO 6320 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 6320 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 16:11:02.634  INFO 6320 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 16:11:05.193  INFO 6320 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 16:11:05.214  INFO 6320 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 16:11:05.219  INFO 6320 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 16:11:05.495  INFO 6320 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 16:11:05.496  INFO 6320 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2732 ms
+2023-08-18 16:11:05.645  WARN 6320 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\AdsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 16:11:05.651  INFO 6320 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 16:11:05.690  INFO 6320 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 16:11:05.799 ERROR 6320 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.skypro.homework.service.impl.UserServiceImpl required a bean of type 'ru.skypro.homework.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.repository.UserRepository' in your configuration.
+
+2023-08-18 16:53:58.827  INFO 5988 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 5988 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 16:53:58.834  INFO 5988 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 16:54:01.444  INFO 5988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 16:54:01.463  INFO 5988 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 16:54:01.464  INFO 5988 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 16:54:01.743  INFO 5988 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 16:54:01.745  INFO 5988 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2772 ms
+2023-08-18 16:54:01.878  WARN 5988 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\AdsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 16:54:01.884  INFO 5988 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 16:54:01.917  INFO 5988 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 16:54:01.967 ERROR 5988 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.skypro.homework.service.impl.UserServiceImpl required a bean of type 'ru.skypro.homework.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.repository.UserRepository' in your configuration.
+
+2023-08-18 17:08:56.572  INFO 452 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 452 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 17:08:56.579  INFO 452 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 17:08:59.549  INFO 452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 17:08:59.571  INFO 452 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 17:08:59.572  INFO 452 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 17:08:59.909  INFO 452 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 17:08:59.910  INFO 452 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3173 ms
+2023-08-18 17:09:00.003  WARN 452 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\AdsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 17:09:00.007  INFO 452 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 17:09:00.036  INFO 452 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 17:09:00.102 ERROR 452 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.skypro.homework.service.impl.UserServiceImpl required a bean of type 'ru.skypro.homework.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.repository.UserRepository' in your configuration.
+
+2023-08-18 17:14:40.737  INFO 3584 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 3584 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 17:14:40.747  INFO 3584 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 17:14:43.505  INFO 3584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 17:14:43.525  INFO 3584 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 17:14:43.527  INFO 3584 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 17:14:43.853  INFO 3584 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 17:14:43.853  INFO 3584 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2957 ms
+2023-08-18 17:14:44.168  WARN 3584 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\AdsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 17:14:44.175  INFO 3584 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 17:14:44.228  INFO 3584 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 17:14:44.288 ERROR 3584 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.skypro.homework.service.impl.UserServiceImpl required a bean of type 'ru.skypro.homework.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.repository.UserRepository' in your configuration.
+
+2023-08-18 17:18:19.531  INFO 2448 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 2448 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 17:18:19.538  INFO 2448 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 17:18:22.181  INFO 2448 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 17:18:22.203  INFO 2448 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 17:18:22.204  INFO 2448 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 17:18:22.497  INFO 2448 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 17:18:22.497  INFO 2448 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2782 ms
+2023-08-18 17:18:22.629  WARN 2448 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\AdsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 17:18:22.636  INFO 2448 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 17:18:22.676  INFO 2448 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 17:18:22.826 ERROR 2448 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.skypro.homework.service.impl.UserServiceImpl required a bean of type 'ru.skypro.homework.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.repository.UserRepository' in your configuration.
+
+2023-08-18 17:19:59.058  INFO 1188 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 1188 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 17:19:59.065  INFO 1188 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 17:20:01.975  INFO 1188 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 17:20:01.995  INFO 1188 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 17:20:01.996  INFO 1188 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 17:20:02.349  INFO 1188 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 17:20:02.351  INFO 1188 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3085 ms
+2023-08-18 17:20:02.485  WARN 1188 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\AdsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 17:20:02.490  INFO 1188 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 17:20:02.517  INFO 1188 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 17:20:02.572 ERROR 1188 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.skypro.homework.service.impl.UserServiceImpl required a bean of type 'ru.skypro.homework.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.repository.UserRepository' in your configuration.
+
+2023-08-18 17:31:28.061  INFO 8696 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 8696 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 17:31:28.067  INFO 8696 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 17:31:30.757  INFO 8696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 17:31:30.776  INFO 8696 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 17:31:30.777  INFO 8696 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 17:31:31.064  INFO 8696 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 17:31:31.065  INFO 8696 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2879 ms
+2023-08-18 17:31:31.345  WARN 8696 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\AdsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.repository.AdsRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 17:31:31.353  INFO 8696 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 17:31:31.395  INFO 8696 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 17:31:31.440 ERROR 8696 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 2 of constructor in ru.skypro.homework.service.impl.AdsServiceImpl required a bean of type 'ru.skypro.homework.repository.AdsRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.repository.AdsRepository' in your configuration.
+
+2023-08-18 17:38:53.476  INFO 8756 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 8756 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 17:38:53.476  INFO 8756 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 17:38:56.003  INFO 8756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 17:38:56.019  INFO 8756 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 17:38:56.019  INFO 8756 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 17:38:56.228  INFO 8756 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 17:38:56.228  INFO 8756 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2626 ms
+2023-08-18 17:38:56.408  WARN 8756 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\AdsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 17:38:56.408  INFO 8756 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 17:38:56.439  INFO 8756 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 17:38:56.521 ERROR 8756 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.skypro.homework.service.impl.UserServiceImpl required a bean of type 'ru.skypro.homework.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.repository.UserRepository' in your configuration.
+
+2023-08-18 17:46:37.089  INFO 7944 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 7944 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 17:46:37.095  INFO 7944 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 17:46:39.632  INFO 7944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 17:46:39.650  INFO 7944 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 17:46:39.652  INFO 7944 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 17:46:39.949  INFO 7944 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 17:46:39.949  INFO 7944 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2746 ms
+2023-08-18 17:46:40.124  WARN 7944 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\AdsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 17:46:40.129  INFO 7944 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 17:46:40.233  INFO 7944 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 17:46:40.324 ERROR 7944 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.skypro.homework.service.impl.UserServiceImpl required a bean of type 'ru.skypro.homework.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.repository.UserRepository' in your configuration.
+
+2023-08-18 17:52:36.086  INFO 3044 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 3044 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 17:52:36.093  INFO 3044 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 17:52:39.121  INFO 3044 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 17:52:39.171  INFO 3044 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 17:52:39.172  INFO 3044 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 17:52:39.457  INFO 3044 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 17:52:39.458  INFO 3044 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3214 ms
+2023-08-18 17:52:39.609  WARN 3044 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\AdsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 17:52:39.614  INFO 3044 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 17:52:39.663  INFO 3044 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 17:52:39.772 ERROR 3044 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.skypro.homework.service.impl.UserServiceImpl required a bean of type 'ru.skypro.homework.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.repository.UserRepository' in your configuration.
+
+2023-08-18 18:24:18.428  INFO 5804 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 5804 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 18:24:18.434  INFO 5804 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 18:24:20.784  INFO 5804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 18:24:20.799  INFO 5804 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 18:24:20.801  INFO 5804 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 18:24:21.015  INFO 5804 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 18:24:21.018  INFO 5804 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2423 ms
+2023-08-18 18:24:21.202  WARN 5804 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\AdsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 18:24:21.208  INFO 5804 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 18:24:21.259  INFO 5804 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 18:24:21.361 ERROR 5804 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.skypro.homework.service.impl.UserServiceImpl required a bean of type 'ru.skypro.homework.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.repository.UserRepository' in your configuration.
+
+2023-08-18 18:26:29.708  INFO 5480 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 5480 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 18:26:29.721  INFO 5480 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 18:26:31.997  INFO 5480 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 18:26:32.016  INFO 5480 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 18:26:32.017  INFO 5480 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 18:26:32.263  INFO 5480 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 18:26:32.265  INFO 5480 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2426 ms
+2023-08-18 18:26:32.388  WARN 5480 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\AdsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 18:26:32.393  INFO 5480 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 18:26:32.442  INFO 5480 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 18:26:32.555 ERROR 5480 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.skypro.homework.service.impl.UserServiceImpl required a bean of type 'ru.skypro.homework.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.repository.UserRepository' in your configuration.
+
+2023-08-18 18:27:10.209  INFO 2800 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 2800 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 18:27:10.214  INFO 2800 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 18:27:12.412  INFO 2800 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 18:27:12.432  INFO 2800 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 18:27:12.436  INFO 2800 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 18:27:12.736  INFO 2800 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 18:27:12.736  INFO 2800 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2416 ms
+2023-08-18 18:27:12.864  WARN 2800 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\AdsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 18:27:12.870  INFO 2800 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 18:27:12.914  INFO 2800 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 18:27:13.064 ERROR 2800 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.skypro.homework.service.impl.UserServiceImpl required a bean of type 'ru.skypro.homework.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.repository.UserRepository' in your configuration.
+
+2023-08-18 18:28:25.859  INFO 9148 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 9148 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 18:28:25.871  INFO 9148 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 18:28:29.277  INFO 9148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 18:28:29.299  INFO 9148 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 18:28:29.300  INFO 9148 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 18:28:29.725  INFO 9148 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 18:28:29.727  INFO 9148 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3731 ms
+2023-08-18 18:28:29.914  WARN 9148 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\AdsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 18:28:29.918  INFO 9148 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 18:28:29.976  INFO 9148 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 18:28:30.050 ERROR 9148 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.skypro.homework.service.impl.UserServiceImpl required a bean of type 'ru.skypro.homework.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.repository.UserRepository' in your configuration.
+
+2023-08-18 18:29:49.663  INFO 7708 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 7708 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-18 18:29:49.671  INFO 7708 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 18:29:52.369  INFO 7708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 18:29:52.387  INFO 7708 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 18:29:52.389  INFO 7708 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-18 18:29:52.667  INFO 7708 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 18:29:52.667  INFO 7708 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2798 ms
+2023-08-18 18:29:52.822  WARN 7708 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsController' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\controller\AdsController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adsServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\AdsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes\ru\skypro\homework\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.skypro.homework.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-18 18:29:52.830  INFO 7708 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-18 18:29:52.939  INFO 7708 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-18 18:29:53.032 ERROR 7708 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.skypro.homework.service.impl.UserServiceImpl required a bean of type 'ru.skypro.homework.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.skypro.homework.repository.UserRepository' in your configuration.
+
