@@ -12,18 +12,22 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import ru.skypro.homework.dto.ads.AdDto;
 import ru.skypro.homework.dto.ads.CreateOrUpdateAdDto;
 import ru.skypro.homework.dto.ads.ListAdsDto;
+import ru.skypro.homework.dto.auth.Role;
 import ru.skypro.homework.mapper.AdsMapper;
 import ru.skypro.homework.service.AdsService;
 import ru.skypro.homework.service.impl.AdsServiceImpl;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static ru.skypro.homework.dto.auth.Role.USER;
 
 
 @CrossOrigin(value = "http://localhost:3000")
@@ -39,7 +43,7 @@ public class AdsController {
     }
 
     @Operation(
-            summary = "Полуение всех объявлений", tags = "Объявления",
+            summary = "Получение всех объявлений", tags = "Объявления",
             responses = {
                     @ApiResponse(
                             responseCode = "200", description = "OK",
@@ -51,7 +55,7 @@ public class AdsController {
     public ResponseEntity<ListAdsDto> getAllAds() {
 
         List<AdDto> list = adsService.getAllAds();
-        ListAdsDto listAdsDto = null;
+        ListAdsDto listAdsDto = new ListAdsDto();
         if (list == null) {
             return ResponseEntity.notFound().build();
         } else {
@@ -71,9 +75,11 @@ public class AdsController {
                     @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content)
             }
     )
+    @PreAuthorize("isAuthenticated()")
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<AdDto> addAds(@RequestPart("image") MultipartFile multipartFile,
-                                        @RequestBody AdDto adsDto, Authentication authentication) {
+                                        @RequestBody AdDto adsDto,
+                                        Authentication authentication) {
 
         return ResponseEntity.status(HttpStatus.CREATED).body(adsService.addNewAd(multipartFile, adsDto, authentication));
     }
@@ -103,6 +109,7 @@ public class AdsController {
                     @ApiResponse(responseCode = "404", description = "Not found", content = @Content)
             }
     )
+    @PreAuthorize("isAuthenticated()")
     @DeleteMapping("/{id}")
     public ResponseEntity<?> removeAd(@PathVariable("id") Integer id) {
 
@@ -122,6 +129,7 @@ public class AdsController {
                     @ApiResponse(responseCode = "404", description = "Not found", content = @Content)
             }
     )
+    @PreAuthorize("isAuthenticated()")
     @PatchMapping("/{id}")
     public ResponseEntity<CreateOrUpdateAdDto> updateAds(@PathVariable("id") Integer id,
                                                          @RequestBody CreateOrUpdateAdDto createOrUpdateAdDto) {
@@ -139,6 +147,7 @@ public class AdsController {
                     @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content)
             }
     )
+    @PreAuthorize("isAuthenticated()")
     @GetMapping("/me")
     public ListAdsDto getAdsMe(Authentication authentication) {
 
@@ -156,6 +165,7 @@ public class AdsController {
                     @ApiResponse(responseCode = "404", description = "Not found", content = @Content)
             }
     )
+    @PreAuthorize("isAuthenticated()")
     @PatchMapping(value = "/{id}/image", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public void updateAdsImage(@PathVariable("id") Integer id,
                                @RequestPart("image") MultipartFile multipartFile) {

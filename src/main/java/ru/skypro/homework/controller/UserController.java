@@ -6,10 +6,17 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import ru.skypro.homework.dto.auth.NewPassword;
+import ru.skypro.homework.dto.user.UpdateUserDto;
 import ru.skypro.homework.dto.user.UserDto;
+import ru.skypro.homework.mapper.UserMapper;
+import ru.skypro.homework.model.User;
+import ru.skypro.homework.service.impl.ImageServiceImpl;
+import ru.skypro.homework.service.impl.UserServiceImpl;
 
 @RestController
 @RequestMapping("/users")
@@ -17,7 +24,16 @@ import ru.skypro.homework.dto.user.UserDto;
 @Tag(name = "Пользователи", description = "UserController")
 public class UserController {
 
-    //Первоначально стоят загрушки в методах, потом будет изменено на ResponseEntity
+    private final UserServiceImpl userService;
+    private final UserMapper userMapper;
+    private final ImageServiceImpl imageService;
+
+    public UserController(UserServiceImpl userService, UserMapper userMapper, ImageServiceImpl imageService) {
+        this.userService = userService;
+        this.userMapper = userMapper;
+        this.imageService = imageService;
+    }
+
     @Operation(
             summary = "Обновление пароля", tags = "Пользователи",
             responses = {
@@ -30,9 +46,9 @@ public class UserController {
             }
     )
     @PostMapping("/set_password")
-    public NewPassword setPassword(@RequestBody NewPassword newPassword) {
-        System.out.println("пароль обновлен");
-        return new NewPassword();
+    public ResponseEntity<?> setPassword(@RequestBody NewPassword newPassword, Authentication authentication) {
+        userService.updateUserPassword(newPassword, authentication);
+        return ResponseEntity.ok().build();
     }
 
     @Operation(
@@ -46,9 +62,11 @@ public class UserController {
             }
     )
     @GetMapping("/me")
-    public UserDto getUser(UserDto userDto) {
-        System.out.println("Получена информация о пользователе");
-        return new UserDto();
+    public ResponseEntity<UserDto> getUser(UserDto userDto) {
+        User user = userService.getUserByUsername(userDto.getUsername());
+        userDto = userMapper.toUserDto(user);
+        return ResponseEntity.ok(userDto);
+
     }
 
     @Operation(
@@ -63,9 +81,9 @@ public class UserController {
             }
     )
     @PatchMapping("/me")
-    public UserDto updateUser(@RequestBody UserDto userDto) {
-        System.out.println("Обновлена информация о пользователе");
-        return new UserDto();
+    public ResponseEntity<UserDto> updateUser(@RequestBody UpdateUserDto updateUserDto, Authentication authentication) {
+        UserDto userDto = userService.updateUser(updateUserDto, authentication);
+        return ResponseEntity.ok(userDto);
     }
 
     @Operation(
@@ -76,8 +94,9 @@ public class UserController {
             }
     )
     @PatchMapping(value = "/me/image", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public void updateUserAvatar(@RequestPart("image") MultipartFile multipartFile)  {
-        System.out.println("Обновлен аватар");
+    public ResponseEntity<?> updateUserAvatar(@RequestPart("image") MultipartFile multipartFile, Authentication authentication)  {
+        userService.updateUserAvatar(authentication, multipartFile);
+        return ResponseEntity.ok().build();
     }
 }
 
