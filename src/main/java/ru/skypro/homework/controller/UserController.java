@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -45,6 +46,7 @@ public class UserController {
                     @ApiResponse(responseCode = "403", description = "Forbidden", content = @Content)
             }
     )
+    @PreAuthorize("isAuthenticated()")
     @PostMapping("/set_password")
     public ResponseEntity<?> setPassword(@RequestBody NewPassword newPassword, Authentication authentication) {
         userService.updateUserPassword(newPassword, authentication);
@@ -61,6 +63,7 @@ public class UserController {
                     @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content)
             }
     )
+    @PreAuthorize("isAuthenticated()")
     @GetMapping("/me")
     public ResponseEntity<UserDto> getUser(UserDto userDto) {
         User user = userService.getUserByUsername(userDto.getUsername());
@@ -80,6 +83,7 @@ public class UserController {
                     @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content)
             }
     )
+    @PreAuthorize("isAuthenticated()")
     @PatchMapping("/me")
     public ResponseEntity<UserDto> updateUser(@RequestBody UpdateUserDto updateUserDto, Authentication authentication) {
         UserDto userDto = userService.updateUser(updateUserDto, authentication);
@@ -93,6 +97,7 @@ public class UserController {
                     @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content)
             }
     )
+    @PreAuthorize("isAuthenticated()")
     @PatchMapping(value = "/me/image", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<?> updateUserAvatar(@RequestPart("image") MultipartFile multipartFile, Authentication authentication)  {
         userService.updateUserAvatar(authentication, multipartFile);
