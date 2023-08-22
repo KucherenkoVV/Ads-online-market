@@ -8,7 +8,7 @@ import ru.skypro.homework.dto.ads.CreateOrUpdateAdDto;
 import ru.skypro.homework.dto.ads.ExtendedAdDto;
 import ru.skypro.homework.model.Ads;
 
-import java.util.List;
+import java.util.Optional;
 
 @Mapper(componentModel = "spring")
 public interface AdsMapper {
@@ -39,4 +39,9 @@ public interface AdsMapper {
     @Mapping(target = "price", source = "price")
     CreateOrUpdateAdDto toCreatedOrUpdateAdDto (Ads ads);
 
+
+    Ads toAdsEntityFromCreateOrUpdateDto(CreateOrUpdateAdDto createOrUpdateAdDto);
+
+    @Mapping(target = "author.id", source = "author")
+    Ads toAdsEntityFromAdDto(AdDto adDto);
 }

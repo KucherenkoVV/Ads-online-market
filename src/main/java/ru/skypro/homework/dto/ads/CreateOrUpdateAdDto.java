@@ -7,6 +7,6 @@ import lombok.Data;
 @AllArgsConstructor
 public class CreateOrUpdateAdDto {
     private String title;
-    private String price;
+    private int price;
     private String description;
 }

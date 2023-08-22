@@ -6,6 +6,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.stereotype.Service;
 import ru.skypro.homework.dto.auth.Register;
+import ru.skypro.homework.mapper.UserMapper;
+import ru.skypro.homework.repository.UserRepository;
 import ru.skypro.homework.service.AuthService;
 
 @Service
@@ -13,11 +15,15 @@ public class AuthServiceImpl implements AuthService {
 
     private final UserDetailsManager manager;
     private final PasswordEncoder encoder;
+    private final UserRepository userRepository;
+    private final UserMapper userMapper;
 
     public AuthServiceImpl(UserDetailsManager manager,
-                           PasswordEncoder passwordEncoder) {
+                           PasswordEncoder passwordEncoder, UserRepository userRepository, UserMapper userMapper) {
         this.manager = manager;
         this.encoder = passwordEncoder;
+        this.userRepository = userRepository;
+        this.userMapper = userMapper;
     }
 
     @Override
@@ -34,6 +40,8 @@ public class AuthServiceImpl implements AuthService {
         if (manager.userExists(register.getUsername())) {
             return false;
         }
+        ru.skypro.homework.model.User user = userMapper.toEntityFromRegisterDto(register);
+        userRepository.save(user);
         manager.createUser(
                 User.builder()
                         .passwordEncoder(this.encoder::encode)

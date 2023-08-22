@@ -1,50 +1,193 @@
-2023-08-13 11:14:11.603  INFO 5252 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 5252 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
-2023-08-13 11:14:11.612  INFO 5252 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-08-13 11:14:14.939  INFO 5252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-08-13 11:14:14.962  INFO 5252 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-08-13 11:14:14.963  INFO 5252 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
-2023-08-13 11:14:15.361  INFO 5252 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-08-13 11:14:15.362  INFO 5252 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3632 ms
-2023-08-13 11:14:17.300  INFO 5252 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@592ca48c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5fed9976, org.springframework.security.web.context.SecurityContextPersistenceFilter@3b7c58e7, org.springframework.security.web.header.HeaderWriterFilter@184823ed, org.springframework.web.filter.CorsFilter@3fdcde7a, org.springframework.security.web.authentication.logout.LogoutFilter@487cd177, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@382dc417, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6371cf2f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@553d2579, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4f363abd, org.springframework.security.web.session.SessionManagementFilter@35eee641, org.springframework.security.web.access.ExceptionTranslationFilter@2bb62414, org.springframework.security.web.access.intercept.AuthorizationFilter@4f1fb828]
-2023-08-13 11:14:17.713  INFO 5252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-08-13 11:14:17.738  INFO 5252 --- [main] ru.skypro.homework.HomeworkApplication   : Started HomeworkApplication in 7.432 seconds (JVM running for 9.912)
-2023-08-13 11:27:59.802  INFO 4528 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 4528 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
-2023-08-13 11:27:59.808  INFO 4528 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-08-13 11:28:03.531  INFO 4528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-08-13 11:28:03.566  INFO 4528 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-08-13 11:28:03.568  INFO 4528 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
-2023-08-13 11:28:04.157  INFO 4528 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-08-13 11:28:04.158  INFO 4528 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4237 ms
-2023-08-13 11:28:07.255  INFO 4528 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@382dc417, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3daf03d8, org.springframework.security.web.context.SecurityContextPersistenceFilter@7aaad0, org.springframework.security.web.header.HeaderWriterFilter@7243145f, org.springframework.web.filter.CorsFilter@510689af, org.springframework.security.web.authentication.logout.LogoutFilter@65be88ae, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7197b07f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@10f477e2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@64518270, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2415e4c7, org.springframework.security.web.session.SessionManagementFilter@794eeaf8, org.springframework.security.web.access.ExceptionTranslationFilter@19dc0d32, org.springframework.security.web.access.intercept.AuthorizationFilter@487cd177]
-2023-08-13 11:28:07.890  INFO 4528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-08-13 11:28:07.912  INFO 4528 --- [main] ru.skypro.homework.HomeworkApplication   : Started HomeworkApplication in 9.418 seconds (JVM running for 12.809)
-2023-08-13 11:30:21.177  INFO 3056 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 3056 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
-2023-08-13 11:30:21.186  INFO 3056 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-08-13 11:30:24.224  INFO 3056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-08-13 11:30:24.247  INFO 3056 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-08-13 11:30:24.249  INFO 3056 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
-2023-08-13 11:30:24.610  INFO 3056 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-08-13 11:30:24.611  INFO 3056 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3315 ms
-2023-08-13 11:30:26.848  INFO 3056 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@521441d5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@592ca48c, org.springframework.security.web.context.SecurityContextPersistenceFilter@64518270, org.springframework.security.web.header.HeaderWriterFilter@2443135, org.springframework.web.filter.CorsFilter@5fed9976, org.springframework.security.web.authentication.logout.LogoutFilter@738a5848, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@33a8c9c9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79627d27, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38588dea, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3fdcde7a, org.springframework.security.web.session.SessionManagementFilter@6097fca9, org.springframework.security.web.access.ExceptionTranslationFilter@5927f904, org.springframework.security.web.access.intercept.AuthorizationFilter@ccd341d]
-2023-08-13 11:30:27.370  INFO 3056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-08-13 11:30:27.429  INFO 3056 --- [main] ru.skypro.homework.HomeworkApplication   : Started HomeworkApplication in 7.268 seconds (JVM running for 9.595)
-2023-08-13 11:34:17.169  INFO 6552 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 6552 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
-2023-08-13 11:34:17.184  INFO 6552 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-08-13 11:34:19.947  INFO 6552 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-08-13 11:34:19.970  INFO 6552 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-08-13 11:34:19.972  INFO 6552 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
-2023-08-13 11:34:20.279  INFO 6552 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-08-13 11:34:20.280  INFO 6552 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2969 ms
-2023-08-13 11:34:22.573  INFO 6552 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5fed9976, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3fdcde7a, org.springframework.security.web.context.SecurityContextPersistenceFilter@79627d27, org.springframework.security.web.header.HeaderWriterFilter@30bbcf91, org.springframework.web.filter.CorsFilter@4f363abd, org.springframework.security.web.authentication.logout.LogoutFilter@324b6a56, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3daf03d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b5b9333, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a8f6e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7302ff13, org.springframework.security.web.session.SessionManagementFilter@5729b410, org.springframework.security.web.access.ExceptionTranslationFilter@413d2cd1, org.springframework.security.web.access.intercept.AuthorizationFilter@6ee5f485]
-2023-08-13 11:34:23.420  INFO 6552 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-08-13 11:34:23.455  INFO 6552 --- [main] ru.skypro.homework.HomeworkApplication   : Started HomeworkApplication in 7.264 seconds (JVM running for 9.422)
-2023-08-13 11:50:14.529  INFO 3292 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 3292 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
-2023-08-13 11:50:14.541  INFO 3292 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-08-13 11:50:21.231  INFO 3292 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-08-13 11:50:21.283  INFO 3292 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-08-13 11:50:21.289  INFO 3292 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
-2023-08-13 11:50:22.025  INFO 3292 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-08-13 11:50:22.025  INFO 3292 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7226 ms
-2023-08-13 11:50:26.691  INFO 3292 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5fed9976, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3fdcde7a, org.springframework.security.web.context.SecurityContextPersistenceFilter@79627d27, org.springframework.security.web.header.HeaderWriterFilter@30bbcf91, org.springframework.web.filter.CorsFilter@4f363abd, org.springframework.security.web.authentication.logout.LogoutFilter@324b6a56, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3daf03d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b5b9333, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a8f6e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7302ff13, org.springframework.security.web.session.SessionManagementFilter@5729b410, org.springframework.security.web.access.ExceptionTranslationFilter@413d2cd1, org.springframework.security.web.access.intercept.AuthorizationFilter@6ee5f485]
-2023-08-13 11:50:27.877  INFO 3292 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-08-13 11:50:27.949  INFO 3292 --- [main] ru.skypro.homework.HomeworkApplication   : Started HomeworkApplication in 15.807 seconds (JVM running for 20.389)
+2023-08-20 13:06:45.506  INFO 1312 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 1312 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-20 13:06:45.790  INFO 1312 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-20 13:07:12.156  INFO 1312 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-20 13:07:13.655  INFO 1312 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1333 ms. Found 3 JPA repository interfaces.
+2023-08-20 13:07:29.889  INFO 1312 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-20 13:07:30.108  INFO 1312 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-20 13:07:30.158  INFO 1312 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-20 13:07:41.021  INFO 1312 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-20 13:07:41.056  INFO 1312 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 53719 ms
+2023-08-20 13:07:57.749  INFO 1312 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-20 13:08:07.306  INFO 1312 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-20 13:08:11.918  INFO 1312 --- [main] liquibase.database                       : Set default schema name to public
+2023-08-20 13:08:13.441  INFO 1312 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2023-08-20 13:08:18.034  INFO 1312 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2023-08-20 13:08:21.103  INFO 1312 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2023-08-20 13:08:21.125  WARN 1312 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for change set liquibase/init.sql::1::KucherenkoVV:
+     Reason: liquibase.exception.DatabaseException: ОШИБКА: отношение "users" уже существует [Failed SQL: (0) CREATE TABLE users
+(
+    id         SERIAL PRIMARY KEY,
+    username   VARCHAR(20) UNIQUE NOT NULL,
+    first_name VARCHAR(25)        NOT NULL,
+    last_name  VARCHAR(25)        NOT NULL,
+    phone      VARCHAR(13)        NOT NULL,
+    password   VARCHAR(255)       NOT NULL,
+    role       VARCHAR(10)        NOT NULL DEFAULT 'USER',
+    image      VARCHAR
+)]
+2023-08-20 13:08:21.134  INFO 1312 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-20 13:08:22.512  INFO 1312 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-20 13:08:22.671  INFO 1312 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-20 13:08:23.689  INFO 1312 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-20 13:08:24.452 ERROR 1312 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for change set liquibase/init.sql::1::KucherenkoVV:
+     Reason: liquibase.exception.DatabaseException: ОШИБКА: отношение "users" уже существует [Failed SQL: (0) CREATE TABLE users
+(
+    id         SERIAL PRIMARY KEY,
+    username   VARCHAR(20) UNIQUE NOT NULL,
+    first_name VARCHAR(25)        NOT NULL,
+    last_name  VARCHAR(25)        NOT NULL,
+    phone      VARCHAR(13)        NOT NULL,
+    password   VARCHAR(255)       NOT NULL,
+    role       VARCHAR(10)        NOT NULL DEFAULT 'USER',
+    image      VARCHAR
+)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1156) ~[spring-context-5.3.26.jar:5.3.26]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:910) ~[spring-context-5.3.26.jar:5.3.26]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.26.jar:5.3.26]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.10.jar:2.7.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.10.jar:2.7.10]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.10.jar:2.7.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.10.jar:2.7.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.10.jar:2.7.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.10.jar:2.7.10]
+	at ru.skypro.homework.HomeworkApplication.main(HomeworkApplication.java:12) ~[classes/:na]
+Caused by: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for change set liquibase/init.sql::1::KucherenkoVV:
+     Reason: liquibase.exception.DatabaseException: ОШИБКА: отношение "users" уже существует [Failed SQL: (0) CREATE TABLE users
+(
+    id         SERIAL PRIMARY KEY,
+    username   VARCHAR(20) UNIQUE NOT NULL,
+    first_name VARCHAR(25)        NOT NULL,
+    last_name  VARCHAR(25)        NOT NULL,
+    phone      VARCHAR(13)        NOT NULL,
+    password   VARCHAR(255)       NOT NULL,
+    role       VARCHAR(10)        NOT NULL DEFAULT 'USER',
+    image      VARCHAR
+)]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:126) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Liquibase.lambda$null$0(Liquibase.java:265) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:180) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.child(Scope.java:158) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.child(Scope.java:243) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Liquibase.lambda$update$1(Liquibase.java:264) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:180) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.child(Scope.java:158) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Liquibase.runInScope(Liquibase.java:2405) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:211) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:197) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:314) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:269) ~[liquibase-core-4.11.0.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.26.jar:5.3.26]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.26.jar:5.3.26]
+	... 18 common frames omitted
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for change set liquibase/init.sql::1::KucherenkoVV:
+     Reason: liquibase.exception.DatabaseException: ОШИБКА: отношение "users" уже существует [Failed SQL: (0) CREATE TABLE users
+(
+    id         SERIAL PRIMARY KEY,
+    username   VARCHAR(20) UNIQUE NOT NULL,
+    first_name VARCHAR(25)        NOT NULL,
+    last_name  VARCHAR(25)        NOT NULL,
+    phone      VARCHAR(13)        NOT NULL,
+    password   VARCHAR(255)       NOT NULL,
+    role       VARCHAR(10)        NOT NULL DEFAULT 'USER',
+    image      VARCHAR
+)]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:696) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:56) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.changelog.ChangeLogIterator$2.lambda$null$0(ChangeLogIterator.java:113) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:180) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.child(Scope.java:158) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.changelog.ChangeLogIterator$2.lambda$run$1(ChangeLogIterator.java:112) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:180) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.child(Scope.java:158) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.child(Scope.java:243) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.changelog.ChangeLogIterator$2.run(ChangeLogIterator.java:93) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:180) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.child(Scope.java:158) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.child(Scope.java:243) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.Scope.child(Scope.java:247) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:65) ~[liquibase-core-4.11.0.jar:na]
+	... 36 common frames omitted
+Caused by: liquibase.exception.DatabaseException: ОШИБКА: отношение "users" уже существует [Failed SQL: (0) CREATE TABLE users
+(
+    id         SERIAL PRIMARY KEY,
+    username   VARCHAR(20) UNIQUE NOT NULL,
+    first_name VARCHAR(25)        NOT NULL,
+    last_name  VARCHAR(25)        NOT NULL,
+    phone      VARCHAR(13)        NOT NULL,
+    password   VARCHAR(255)       NOT NULL,
+    role       VARCHAR(10)        NOT NULL DEFAULT 'USER',
+    image      VARCHAR
+)]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:397) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:83) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:151) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.database.AbstractJdbcDatabase.execute(AbstractJdbcDatabase.java:1279) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1261) ~[liquibase-core-4.11.0.jar:na]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:661) ~[liquibase-core-4.11.0.jar:na]
+	... 56 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ОШИБКА: отношение "users" уже существует
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:290) ~[postgresql-42.5.1.jar:42.5.1]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:393) ~[liquibase-core-4.11.0.jar:na]
+	... 61 common frames omitted
+
+2023-08-20 15:53:24.439  INFO 10000 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 10000 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-20 15:53:24.448  INFO 10000 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-20 15:53:27.825  INFO 10000 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-20 15:53:28.185  INFO 10000 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 335 ms. Found 3 JPA repository interfaces.
+2023-08-20 15:53:30.347  INFO 10000 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-20 15:53:30.389  INFO 10000 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-20 15:53:30.416  INFO 10000 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-20 15:53:31.609  INFO 10000 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-20 15:53:31.611  INFO 10000 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7037 ms
+2023-08-20 15:53:32.585  INFO 10000 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-20 15:53:33.589  INFO 10000 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-20 15:53:34.189  INFO 10000 --- [main] liquibase.database                       : Set default schema name to public
+2023-08-20 15:53:34.658  INFO 10000 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2023-08-20 15:53:35.591  INFO 10000 --- [main] liquibase.changelog                      : Creating database history table with name: public.databasechangelog
+2023-08-20 15:53:35.619  INFO 10000 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2023-08-20 15:53:35.836  INFO 10000 --- [main] liquibase.changelog                      : Custom SQL executed
+2023-08-20 15:53:35.843  INFO 10000 --- [main] liquibase.changelog                      : ChangeSet liquibase/init.sql::1::KucherenkoVV ran successfully in 123ms
+2023-08-20 15:53:35.928  INFO 10000 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2023-08-20 15:53:36.383  INFO 10000 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-20 15:53:36.611  INFO 10000 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-20 15:53:37.165  INFO 10000 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-20 15:53:37.536  INFO 10000 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-08-20 15:53:39.599  INFO 10000 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-20 15:53:39.627  INFO 10000 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-20 15:53:42.553  WARN 10000 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-20 15:53:44.483  INFO 10000 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@775fec4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c7d173f, org.springframework.security.web.context.SecurityContextPersistenceFilter@14af57c3, org.springframework.security.web.header.HeaderWriterFilter@593e594f, org.springframework.web.filter.CorsFilter@12f12744, org.springframework.security.web.authentication.logout.LogoutFilter@703947bd, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@638e8194, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2aeb3f3b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@62b0792, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c618295, org.springframework.security.web.session.SessionManagementFilter@7fa2473a, org.springframework.security.web.access.ExceptionTranslationFilter@4bdbfbc6, org.springframework.security.web.access.intercept.AuthorizationFilter@198a0416]
+2023-08-20 15:53:45.517  INFO 10000 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-20 15:53:45.569  INFO 10000 --- [main] ru.skypro.homework.HomeworkApplication   : Started HomeworkApplication in 22.797 seconds (JVM running for 28.64)
