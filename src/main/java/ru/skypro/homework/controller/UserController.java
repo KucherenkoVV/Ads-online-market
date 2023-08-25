@@ -48,7 +48,7 @@ public class UserController {
     )
     @PreAuthorize("isAuthenticated()")
     @PostMapping("/set_password")
-    public ResponseEntity<?> setPassword(@RequestBody NewPassword newPassword, Authentication authentication) {
+    public ResponseEntity<Void> setPassword(@RequestBody NewPassword newPassword, Authentication authentication) {
         userService.updateUserPassword(newPassword, authentication);
         return ResponseEntity.ok().build();
     }
@@ -65,9 +65,9 @@ public class UserController {
     )
     @PreAuthorize("isAuthenticated()")
     @GetMapping("/me")
-    public ResponseEntity<UserDto> getUser(UserDto userDto) {
-        User user = userService.getUserByUsername(userDto.getUsername());
-        userDto = userMapper.toUserDto(user);
+    public ResponseEntity<UserDto> getUser(Authentication authentication) {
+        User user = userService.getUserByUsername(authentication.getName());
+        UserDto userDto = userMapper.toUserDto(user);
         return ResponseEntity.ok(userDto);
 
     }
@@ -102,6 +102,12 @@ public class UserController {
     public ResponseEntity<?> updateUserAvatar(@RequestPart("image") MultipartFile multipartFile, Authentication authentication)  {
         userService.updateUserAvatar(authentication, multipartFile);
         return ResponseEntity.ok().build();
+    }
+
+    @Operation(hidden = true)
+    @GetMapping(value = "/avatar/{id}", produces = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public String getAvatar (@PathVariable("id") Integer id) {
+        return id.toString();
     }
 }
 

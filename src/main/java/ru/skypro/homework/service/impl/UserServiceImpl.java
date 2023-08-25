@@ -1,6 +1,5 @@
 package ru.skypro.homework.service.impl;
 
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -23,37 +22,53 @@ import java.util.List;
 @Slf4j
 @Transactional
 @Service
-@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
-    // todo допилить логирование, сохранение ссылок на картинки
+    // todo допилить сохранение ссылок на картинки
     private final UserRepository userRepository;
     private final UserMapper userMapper;
     private final PasswordEncoder passwordEncoder;
     private final ImageService imageService;
 
+    public UserServiceImpl(UserRepository userRepository, UserMapper userMapper, PasswordEncoder passwordEncoder, ImageService imageService) {
+        this.userRepository = userRepository;
+        this.userMapper = userMapper;
+        this.passwordEncoder = passwordEncoder;
+        this.imageService = imageService;
+    }
+
     @Override
     public UserDto getUserById(Integer id) {
-        return userMapper.toUserDto(userRepository.findById(id).orElseThrow());
+        log.info("Getting user by id {}.", id);
+        UserDto userDto = userMapper.toUserDto(userRepository.findById(id).orElseThrow());
+        log.info("User received.");
+        return userDto;
     }
 
     @Override
     public User getUserByUsername(String username) {
-        return userRepository.findByUsernameIgnoreCase(username).orElseThrow();
+        log.info("Getting user by username {}", username);
+        User user = userRepository.findByUsernameIgnoreCase(username).orElseThrow();
+        log.info("User received by username {}", username);
+        return user;
     }
 
     @Override
     public List<UserDto> getAllUser() {
-        return userMapper.toListUsersDto(userRepository.findAll());
+        log.info("Getting all users.");
+        List<UserDto> userDtoList = userMapper.toListUsersDto(userRepository.findAll());
+        log.info("All user received.");
+        return userDtoList;
     }
 
     @Override
     public void updateUserPassword(NewPassword newPassword, Authentication authentication) {
+        log.info("Updating user password by new password.");
         User user = getUserByUsername(authentication.getName());
         if (passwordEncoder.matches(newPassword.getCurrentPassword(), user.getPassword())) {
             user.setPassword(passwordEncoder.encode(newPassword.getNewPassword()));
             userRepository.save(user);
-            log.debug("Password updated for user: {}", authentication.getName());
+            log.info("Password updated for user: {}", authentication.getName());
         } else {
             throw new AuthentificationException("Password incorrect.");
         }
@@ -61,6 +76,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDto updateUser(UpdateUserDto updateUserDto, Authentication authentication) {
+        log.info("Updating user from UpdateUserDto.");
         if (!updateUserDto.getFirstName().isBlank() || !updateUserDto.getLastName().isBlank() || !updateUserDto.getPhone().isBlank()) {
             User user = getUserByUsername(authentication.getName());
             if (updateUserDto.getFirstName() != null) {
@@ -73,7 +89,7 @@ public class UserServiceImpl implements UserService {
                 user.setPhone(updateUserDto.getPhone());
             }
             userRepository.save(user);
-            log.debug("User details updated for user: {}", authentication.getName());
+            log.info("User details updated for user: {}", authentication.getName());
             return userMapper.toUserDto(user);
         } else {
             throw new EmptyArgumentException("Information for update User is not enough.");
@@ -83,8 +99,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void updateUserAvatar(Authentication authentication, MultipartFile file) {
+        log.info("Updating user avatar by name {} from new file.", authentication.getName());
         User user = getUserByUsername(authentication.getName());
         imageService.uploadImage(file);
+        log.info("Avatar updated for user with name {}", authentication.getName());
         // доделать сохранение ссылки пользователю после создания эндпоинта
     }
 }

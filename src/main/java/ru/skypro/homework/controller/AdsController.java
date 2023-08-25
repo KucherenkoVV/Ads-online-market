@@ -6,9 +6,6 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -19,69 +16,52 @@ import org.springframework.web.multipart.MultipartFile;
 import ru.skypro.homework.dto.ads.AdDto;
 import ru.skypro.homework.dto.ads.CreateOrUpdateAdDto;
 import ru.skypro.homework.dto.ads.ListAdsDto;
-import ru.skypro.homework.dto.auth.Role;
-import ru.skypro.homework.mapper.AdsMapper;
-import ru.skypro.homework.service.AdsService;
 import ru.skypro.homework.service.impl.AdsServiceImpl;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static ru.skypro.homework.dto.auth.Role.USER;
+import javax.validation.Valid;
 
 
 @CrossOrigin(value = "http://localhost:3000")
 @RestController
 @RequestMapping("/ads")
+@RequiredArgsConstructor
 @Tag(name = "Объявления")
 public class AdsController {
 
     private final AdsServiceImpl adsService;
 
-    public AdsController(AdsServiceImpl adsService) {
-        this.adsService = adsService;
-    }
-
     @Operation(
-            summary = "Получение всех объявлений", tags = "Объявления",
+            summary = "Получить все объявления", tags = "Объявления",
             responses = {
                     @ApiResponse(
                             responseCode = "200", description = "OK",
                             content = {@Content(mediaType = "application/json",
-                                    schema = @Schema(implementation = AdDto.class))})
+                                    schema = @Schema(implementation = ListAdsDto.class))})
             }
     )
     @GetMapping
     public ResponseEntity<ListAdsDto> getAllAds() {
 
-        List<AdDto> list = adsService.getAllAds();
-        ListAdsDto listAdsDto = new ListAdsDto();
-        if (list == null) {
-            return ResponseEntity.notFound().build();
-        } else {
-            listAdsDto.setResults(list);
-            listAdsDto.setCount(list.size());
-            return ResponseEntity.ok(listAdsDto);
-        }
+            return ResponseEntity.ok( adsService.getAllAds());
     }
-
     @Operation(
-            summary = "Добавление объявления", tags = "Объявления",
+            summary = "Добавить объявление", tags = "Объявления",
             responses = {
                     @ApiResponse(
                             responseCode = "201", description = "Created",
                             content = {@Content(mediaType = "application/json",
                                     schema = @Schema(implementation = AdDto.class))}),
-                    @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content)
+                    @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content), //где получить?
+                    @ApiResponse(responseCode = "403", description = "Forbidden", content = @Content),
+                    @ApiResponse(responseCode = "404", description = "Not found", content = @Content)
             }
     )
-    @PreAuthorize("isAuthenticated()")
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<AdDto> addAds(@RequestPart("image") MultipartFile multipartFile,
-                                        @RequestBody AdDto adsDto,
-                                        Authentication authentication) {
-
-        return ResponseEntity.status(HttpStatus.CREATED).body(adsService.addNewAd(multipartFile, adsDto, authentication));
+    public ResponseEntity<AdDto> addAds(@RequestPart("image") MultipartFile imageFile,
+                                         @RequestPart("properties") AdDto createAds,
+                                         Authentication authentication)  {
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .body(adsService.addNewAd(imageFile, createAds, authentication));
     }
 
     @Operation(

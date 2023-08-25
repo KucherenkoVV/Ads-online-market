@@ -43,5 +43,8 @@ public interface AdsMapper {
     Ads toAdsEntityFromCreateOrUpdateDto(CreateOrUpdateAdDto createOrUpdateAdDto);
 
     @Mapping(target = "author.id", source = "author")
+    @Mapping(target = "description", source = "description")
+    @Mapping(target = "title", source = "title")
+    @Mapping(target = "price", source = "price")
     Ads toAdsEntityFromAdDto(AdDto adDto);
 }

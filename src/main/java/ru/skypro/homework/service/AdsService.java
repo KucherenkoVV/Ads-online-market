@@ -12,7 +12,7 @@ import java.util.List;
 
 public interface AdsService {
 
-    List<AdDto> getAllAds();
+    ListAdsDto getAllAds();
 
     ListAdsDto getAdsMe(Authentication authentication);
 
