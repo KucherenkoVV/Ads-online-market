@@ -927,3 +927,248 @@
 2023-08-29 20:11:18.024  INFO 11892 --- [http-nio-8080-exec-8] r.s.h.service.impl.AdsServiceImpl        : Geting Ads for selected user.
 2023-08-29 20:11:23.456  INFO 11892 --- [http-nio-8080-exec-8] r.s.h.service.impl.AdsServiceImpl        : Received all ads for selected user.
 2023-08-29 20:11:23.467  INFO 11892 --- [http-nio-8080-exec-9] r.s.h.service.impl.UserServiceImpl       : User received by username user@gmail.com
+2023-08-29 20:11:23.484  INFO 11892 --- [http-nio-8080-exec-10] r.s.h.service.impl.AdsServiceImpl        : All ads get successful.
+2023-08-29 21:01:39.217  WARN 11892 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=----WebKitFormBoundary79sSr0BQuNrWlO6K;charset=UTF-8' not supported]
+2023-08-29 21:01:39.419  INFO 11892 --- [http-nio-8080-exec-1] r.s.h.service.impl.AdsServiceImpl        : Geting Ads for selected user.
+2023-08-29 21:01:39.803  INFO 11892 --- [http-nio-8080-exec-9] r.s.h.service.impl.UserServiceImpl       : Getting user by username user@gmail.com
+2023-08-29 21:01:39.419  INFO 11892 --- [http-nio-8080-exec-10] r.s.h.service.impl.AdsServiceImpl        : Geting all ads.
+2023-08-29 21:01:40.473  INFO 11892 --- [http-nio-8080-exec-1] r.s.h.service.impl.AdsServiceImpl        : Received all ads for selected user.
+2023-08-29 21:01:40.704  INFO 11892 --- [http-nio-8080-exec-9] r.s.h.service.impl.UserServiceImpl       : User received by username user@gmail.com
+2023-08-29 21:01:40.676  INFO 11892 --- [http-nio-8080-exec-10] r.s.h.service.impl.AdsServiceImpl        : All ads get successful.
+2023-08-29 21:06:43.219  INFO 11892 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-29 21:06:43.762  INFO 11892 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-29 21:06:44.225  INFO 11892 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-29 21:09:28.645  INFO 2272 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 2272 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-29 21:09:28.735  INFO 2272 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-29 21:09:49.003  INFO 2272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-29 21:09:49.925  INFO 2272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 862 ms. Found 3 JPA repository interfaces.
+2023-08-29 21:09:53.602  INFO 2272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-29 21:09:53.661  INFO 2272 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-29 21:09:53.667  INFO 2272 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-29 21:09:56.065  INFO 2272 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-29 21:09:56.068  INFO 2272 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 26512 ms
+2023-08-29 21:09:58.183  INFO 2272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-29 21:09:59.561  INFO 2272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-29 21:10:01.099  INFO 2272 --- [main] liquibase.database                       : Set default schema name to public
+2023-08-29 21:10:02.045  INFO 2272 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2023-08-29 21:10:03.644  INFO 2272 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2023-08-29 21:10:04.003  INFO 2272 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2023-08-29 21:10:04.997  INFO 2272 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-29 21:10:05.724  INFO 2272 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-29 21:10:06.985  INFO 2272 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-29 21:10:07.829  INFO 2272 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-08-29 21:10:13.701  INFO 2272 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-29 21:10:13.770  INFO 2272 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-29 21:10:20.846  INFO 2272 --- [main] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2023-08-29 21:10:22.426  WARN 2272 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-29 21:10:26.859  INFO 2272 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@488c6c98, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2530baf6, org.springframework.security.web.context.SecurityContextPersistenceFilter@5978ba12, org.springframework.security.web.header.HeaderWriterFilter@294ab038, org.springframework.web.filter.CorsFilter@1e7797db, org.springframework.security.web.authentication.logout.LogoutFilter@690c3b1f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@77511e9c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6b7e4db6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@377cc0f8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4402ed61, org.springframework.security.web.session.SessionManagementFilter@d62feaf, org.springframework.security.web.access.ExceptionTranslationFilter@c76762, org.springframework.security.web.access.intercept.AuthorizationFilter@4fae4c3b]
+2023-08-29 21:10:28.855  INFO 2272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-29 21:10:28.922  INFO 2272 --- [main] ru.skypro.homework.HomeworkApplication   : Started HomeworkApplication in 64.289 seconds (JVM running for 79.321)
+2023-08-29 21:11:35.692  INFO 2272 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-29 21:11:35.825  INFO 2272 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-29 21:11:36.088  INFO 2272 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 254 ms
+2023-08-29 21:12:11.726  WARN 2272 --- [http-nio-8080-exec-10] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [7,278] milliseconds.
+2023-08-29 21:12:11.726  WARN 2272 --- [http-nio-8080-exec-9] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [7,460] milliseconds.
+2023-08-29 21:12:11.726  WARN 2272 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [7,463] milliseconds.
+2023-08-29 21:12:17.007  INFO 2272 --- [http-nio-8080-exec-9] r.s.h.service.impl.AdsServiceImpl        : Geting Ads for selected user.
+2023-08-29 21:12:17.007  INFO 2272 --- [http-nio-8080-exec-10] r.s.h.service.impl.AdsServiceImpl        : Geting all ads.
+2023-08-29 21:12:17.022  INFO 2272 --- [http-nio-8080-exec-1] r.s.h.service.impl.UserServiceImpl       : Getting user by username user@gmail.com
+2023-08-29 21:12:24.135  INFO 2272 --- [http-nio-8080-exec-9] r.s.h.service.impl.AdsServiceImpl        : Received all ads for selected user.
+2023-08-29 21:12:24.615  INFO 2272 --- [http-nio-8080-exec-1] r.s.h.service.impl.UserServiceImpl       : User received by username user@gmail.com
+2023-08-29 21:12:24.951  INFO 2272 --- [http-nio-8080-exec-10] r.s.h.service.impl.AdsServiceImpl        : All ads get successful.
+2023-08-29 21:17:02.425  INFO 2272 --- [http-nio-8080-exec-7] r.s.h.service.impl.AdsServiceImpl        : Geting Ads for selected user.
+2023-08-29 21:17:02.282  INFO 2272 --- [http-nio-8080-exec-3] r.s.h.service.impl.UserServiceImpl       : Getting user by username user@gmail.com
+2023-08-29 21:17:02.366  INFO 2272 --- [http-nio-8080-exec-1] r.s.h.service.impl.AdsServiceImpl        : Geting all ads.
+2023-08-29 21:17:04.119  INFO 2272 --- [http-nio-8080-exec-7] r.s.h.service.impl.AdsServiceImpl        : Received all ads for selected user.
+2023-08-29 21:17:04.119  INFO 2272 --- [http-nio-8080-exec-1] r.s.h.service.impl.AdsServiceImpl        : All ads get successful.
+2023-08-29 21:17:04.174  INFO 2272 --- [http-nio-8080-exec-3] r.s.h.service.impl.UserServiceImpl       : User received by username user@gmail.com
+2023-08-29 21:17:06.203  WARN 2272 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors<EOL>Field error in object 'adDto' on field 'image': rejected value [org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@a27db6]; codes [typeMismatch.adDto.image,typeMismatch.image,typeMismatch.java.lang.String,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [adDto.image,image]; arguments []; default message [image]]; default message [Failed to convert property value of type 'org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile' to required type 'java.lang.String' for property 'image'; nested exception is java.lang.IllegalStateException: Cannot convert value of type 'org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile' to required type 'java.lang.String' for property 'image': no matching editors or conversion strategy found]]
+2023-08-29 21:27:12.422  INFO 2272 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-29 21:27:12.919  INFO 2272 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-29 21:27:13.216  INFO 2272 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-29 21:29:35.123  INFO 5328 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 5328 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-29 21:29:35.163  INFO 5328 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-29 21:29:49.200  INFO 5328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-29 21:29:49.785  INFO 5328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 536 ms. Found 3 JPA repository interfaces.
+2023-08-29 21:29:53.685  INFO 5328 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-29 21:29:53.786  INFO 5328 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-29 21:29:53.789  INFO 5328 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-29 21:29:58.779  INFO 5328 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-29 21:29:58.784  INFO 5328 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 22900 ms
+2023-08-29 21:30:00.752  INFO 5328 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-29 21:30:03.431  INFO 5328 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-29 21:30:05.229  INFO 5328 --- [main] liquibase.database                       : Set default schema name to public
+2023-08-29 21:30:06.138  INFO 5328 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2023-08-29 21:30:07.458  INFO 5328 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2023-08-29 21:30:07.715  INFO 5328 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2023-08-29 21:30:08.880  INFO 5328 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-29 21:30:09.662  INFO 5328 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-29 21:30:11.506  INFO 5328 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-29 21:30:13.066  INFO 5328 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-08-29 21:30:17.250  INFO 5328 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-29 21:30:17.326  INFO 5328 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-29 21:30:21.133  INFO 5328 --- [main] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2023-08-29 21:30:23.017  WARN 5328 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-29 21:30:29.374  INFO 5328 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@535aa7c7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@578781f7, org.springframework.security.web.context.SecurityContextPersistenceFilter@7e577eed, org.springframework.security.web.header.HeaderWriterFilter@c3836b6, org.springframework.web.filter.CorsFilter@7bbd944e, org.springframework.security.web.authentication.logout.LogoutFilter@5318731f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@108fd5d5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@30bfdcc5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@26619e5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@22e253c7, org.springframework.security.web.session.SessionManagementFilter@a2ca681, org.springframework.security.web.access.ExceptionTranslationFilter@18f794e, org.springframework.security.web.access.intercept.AuthorizationFilter@520eb9f8]
+2023-08-29 21:30:31.678  INFO 5328 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-29 21:30:31.774  INFO 5328 --- [main] ru.skypro.homework.HomeworkApplication   : Started HomeworkApplication in 61.973 seconds (JVM running for 86.863)
+2023-08-29 21:31:40.094  INFO 5328 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-29 21:31:40.309  INFO 5328 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-29 21:31:41.025  INFO 5328 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 684 ms
+2023-08-29 21:31:55.779  WARN 5328 --- [http-nio-8080-exec-6] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [2,644] milliseconds.
+2023-08-29 21:31:55.778  WARN 5328 --- [http-nio-8080-exec-4] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [2,627] milliseconds.
+2023-08-29 21:31:55.771  WARN 5328 --- [http-nio-8080-exec-3] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [2,650] milliseconds.
+2023-08-29 21:31:58.281  INFO 5328 --- [http-nio-8080-exec-3] r.s.h.service.impl.AdsServiceImpl        : Geting Ads for selected user.
+2023-08-29 21:31:58.284  INFO 5328 --- [http-nio-8080-exec-6] r.s.h.service.impl.AdsServiceImpl        : Geting all ads.
+2023-08-29 21:31:58.284  INFO 5328 --- [http-nio-8080-exec-4] r.s.h.service.impl.UserServiceImpl       : Getting user by username user@gmail.com
+2023-08-29 21:32:01.281  INFO 5328 --- [http-nio-8080-exec-3] r.s.h.service.impl.AdsServiceImpl        : Received all ads for selected user.
+2023-08-29 21:32:01.487  INFO 5328 --- [http-nio-8080-exec-4] r.s.h.service.impl.UserServiceImpl       : User received by username user@gmail.com
+2023-08-29 21:32:01.581  INFO 5328 --- [http-nio-8080-exec-6] r.s.h.service.impl.AdsServiceImpl        : All ads get successful.
+2023-08-29 21:38:42.977  INFO 5328 --- [http-nio-8080-exec-4] r.s.h.service.impl.UserServiceImpl       : Getting user by username user@gmail.com
+2023-08-29 21:38:42.971  INFO 5328 --- [http-nio-8080-exec-2] r.s.h.service.impl.AdsServiceImpl        : Geting Ads for selected user.
+2023-08-29 21:38:43.014  INFO 5328 --- [http-nio-8080-exec-3] r.s.h.service.impl.AdsServiceImpl        : Geting all ads.
+2023-08-29 21:38:43.978  INFO 5328 --- [http-nio-8080-exec-2] r.s.h.service.impl.AdsServiceImpl        : Received all ads for selected user.
+2023-08-29 21:38:44.276  INFO 5328 --- [http-nio-8080-exec-4] r.s.h.service.impl.UserServiceImpl       : User received by username user@gmail.com
+2023-08-29 21:38:44.298  INFO 5328 --- [http-nio-8080-exec-3] r.s.h.service.impl.AdsServiceImpl        : All ads get successful.
+2023-08-29 21:38:46.601  WARN 5328 --- [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors<EOL>Field error in object 'adDto' on field 'image': rejected value [org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@640c6bb2]; codes [typeMismatch.adDto.image,typeMismatch.image,typeMismatch.java.lang.String,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [adDto.image,image]; arguments []; default message [image]]; default message [Failed to convert property value of type 'org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile' to required type 'java.lang.String' for property 'image'; nested exception is java.lang.IllegalStateException: Cannot convert value of type 'org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile' to required type 'java.lang.String' for property 'image': no matching editors or conversion strategy found]]
+2023-08-29 21:41:28.446  INFO 5328 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-29 21:41:29.593  INFO 5328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-29 21:41:30.068  INFO 5328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-29 21:43:26.986  INFO 11332 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 11332 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-29 21:43:27.002  INFO 11332 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-29 21:43:37.177  INFO 11332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-29 21:43:37.688  INFO 11332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 451 ms. Found 3 JPA repository interfaces.
+2023-08-29 21:43:42.131  INFO 11332 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-29 21:43:42.188  INFO 11332 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-29 21:43:42.191  INFO 11332 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-29 21:43:43.381  INFO 11332 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-29 21:43:43.384  INFO 11332 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 15992 ms
+2023-08-29 21:43:45.033  INFO 11332 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-29 21:43:46.655  INFO 11332 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-29 21:43:48.576  INFO 11332 --- [main] liquibase.database                       : Set default schema name to public
+2023-08-29 21:43:49.402  INFO 11332 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2023-08-29 21:43:50.910  INFO 11332 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2023-08-29 21:43:51.679  INFO 11332 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2023-08-29 21:43:52.566  INFO 11332 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-29 21:43:53.388  INFO 11332 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-29 21:43:54.730  INFO 11332 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-29 21:43:55.977  INFO 11332 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-08-29 21:44:01.986  INFO 11332 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-29 21:44:02.039  INFO 11332 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-29 21:44:06.769  INFO 11332 --- [main] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2023-08-29 21:44:08.753  WARN 11332 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-29 21:44:15.204  INFO 11332 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@48dc9950, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@43735ea0, org.springframework.security.web.context.SecurityContextPersistenceFilter@784c74e, org.springframework.security.web.header.HeaderWriterFilter@15af06f, org.springframework.web.filter.CorsFilter@535aa7c7, org.springframework.security.web.authentication.logout.LogoutFilter@2df24f19, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@25c98637, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e577eed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5bfeb9ba, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@578781f7, org.springframework.security.web.session.SessionManagementFilter@14b9817b, org.springframework.security.web.access.ExceptionTranslationFilter@13b5598b, org.springframework.security.web.access.intercept.AuthorizationFilter@55849272]
+2023-08-29 21:44:18.192  INFO 11332 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-29 21:44:18.352  INFO 11332 --- [main] ru.skypro.homework.HomeworkApplication   : Started HomeworkApplication in 54.691 seconds (JVM running for 74.448)
+2023-08-29 21:44:52.455  INFO 11332 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-29 21:44:53.279  INFO 11332 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-29 21:44:54.349  INFO 11332 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 857 ms
+2023-08-29 21:45:06.702  WARN 11332 --- [http-nio-8080-exec-3] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [3,859] milliseconds.
+2023-08-29 21:45:06.702  WARN 11332 --- [http-nio-8080-exec-4] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [3,823] milliseconds.
+2023-08-29 21:45:06.702  WARN 11332 --- [http-nio-8080-exec-5] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [3,831] milliseconds.
+2023-08-29 21:45:08.612  INFO 11332 --- [http-nio-8080-exec-3] r.s.h.service.impl.AdsServiceImpl        : Geting all ads.
+2023-08-29 21:45:08.235  INFO 11332 --- [http-nio-8080-exec-5] r.s.h.service.impl.UserServiceImpl       : Getting user by username user@gmail.com
+2023-08-29 21:45:08.612  INFO 11332 --- [http-nio-8080-exec-4] r.s.h.service.impl.AdsServiceImpl        : Geting Ads for selected user.
+2023-08-29 21:45:18.882  INFO 11332 --- [http-nio-8080-exec-4] r.s.h.service.impl.AdsServiceImpl        : Received all ads for selected user.
+2023-08-29 21:45:18.942  INFO 11332 --- [http-nio-8080-exec-5] r.s.h.service.impl.UserServiceImpl       : User received by username user@gmail.com
+2023-08-29 21:45:19.532  INFO 11332 --- [http-nio-8080-exec-3] r.s.h.service.impl.AdsServiceImpl        : All ads get successful.
+2023-08-29 21:46:00.446  WARN 11332 --- [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required request part 'file' is not present]
+2023-08-29 21:46:03.791  INFO 11332 --- [http-nio-8080-exec-4] r.s.h.service.impl.AdsServiceImpl        : Geting all ads.
+2023-08-29 21:46:03.979  INFO 11332 --- [http-nio-8080-exec-1] r.s.h.service.impl.AdsServiceImpl        : Geting Ads for selected user.
+2023-08-29 21:46:03.875  INFO 11332 --- [http-nio-8080-exec-4] r.s.h.service.impl.AdsServiceImpl        : All ads get successful.
+2023-08-29 21:46:04.076  INFO 11332 --- [http-nio-8080-exec-1] r.s.h.service.impl.AdsServiceImpl        : Received all ads for selected user.
+2023-08-29 21:46:04.441  INFO 11332 --- [http-nio-8080-exec-3] r.s.h.service.impl.UserServiceImpl       : Getting user by username user@gmail.com
+2023-08-29 21:46:04.466  INFO 11332 --- [http-nio-8080-exec-3] r.s.h.service.impl.UserServiceImpl       : User received by username user@gmail.com
+2023-08-29 21:52:25.290  INFO 10288 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 10288 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-29 21:52:25.308  INFO 10288 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-29 21:52:37.120  INFO 10288 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-29 21:52:37.989  INFO 10288 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 738 ms. Found 3 JPA repository interfaces.
+2023-08-29 21:52:43.287  INFO 10288 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-29 21:52:43.355  INFO 10288 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-29 21:52:43.365  INFO 10288 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-29 21:52:44.762  INFO 10288 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-29 21:52:44.764  INFO 10288 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 18853 ms
+2023-08-29 21:52:46.530  INFO 10288 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-29 21:52:50.928  INFO 10288 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-29 21:52:55.589  INFO 10288 --- [main] liquibase.database                       : Set default schema name to public
+2023-08-29 21:52:57.290  INFO 10288 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2023-08-29 21:52:58.912  INFO 10288 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2023-08-29 21:52:59.379  INFO 10288 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2023-08-29 21:53:01.082  INFO 10288 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-29 21:53:02.446  INFO 10288 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-29 21:53:03.832  INFO 10288 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-29 21:53:04.899  INFO 10288 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-08-29 21:53:11.383  INFO 10288 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-29 21:53:11.971  INFO 10288 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-29 21:53:17.827  INFO 10288 --- [main] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2023-08-29 21:53:21.556  WARN 10288 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-29 21:53:28.675  INFO 10288 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@22e253c7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2480acc3, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e9b0c92, org.springframework.security.web.header.HeaderWriterFilter@7b55fc83, org.springframework.web.filter.CorsFilter@4fe3199d, org.springframework.security.web.authentication.logout.LogoutFilter@294ab038, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4abb4041, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4cf1bd4a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b98c310, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@58ebfbcb, org.springframework.security.web.session.SessionManagementFilter@7e577eed, org.springframework.security.web.access.ExceptionTranslationFilter@76876421, org.springframework.security.web.access.intercept.AuthorizationFilter@294ebdae]
+2023-08-29 21:53:33.928  INFO 10288 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-29 21:53:34.039  INFO 10288 --- [main] ru.skypro.homework.HomeworkApplication   : Started HomeworkApplication in 72.283 seconds (JVM running for 87.381)
+2023-08-29 21:53:55.591  INFO 10288 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-29 21:53:55.602  INFO 10288 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-29 21:53:55.998  INFO 10288 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 395 ms
+2023-08-29 21:54:11.896  WARN 10288 --- [http-nio-8080-exec-4] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [6,021] milliseconds.
+2023-08-29 21:54:11.896  WARN 10288 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [5,895] milliseconds.
+2023-08-29 21:54:11.896  WARN 10288 --- [http-nio-8080-exec-3] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [5,917] milliseconds.
+2023-08-29 21:54:13.848  INFO 10288 --- [http-nio-8080-exec-1] r.s.h.service.impl.AdsServiceImpl        : Geting Ads for selected user.
+2023-08-29 21:54:13.854  INFO 10288 --- [http-nio-8080-exec-4] r.s.h.service.impl.AdsServiceImpl        : Geting all ads.
+2023-08-29 21:54:14.289  INFO 10288 --- [http-nio-8080-exec-3] r.s.h.service.impl.UserServiceImpl       : Getting user by username user@gmail.com
+2023-08-29 21:54:20.317  INFO 10288 --- [http-nio-8080-exec-1] r.s.h.service.impl.AdsServiceImpl        : Received all ads for selected user.
+2023-08-29 21:54:21.930  INFO 10288 --- [http-nio-8080-exec-3] r.s.h.service.impl.UserServiceImpl       : User received by username user@gmail.com
+2023-08-29 21:54:21.973  INFO 10288 --- [http-nio-8080-exec-4] r.s.h.service.impl.AdsServiceImpl        : All ads get successful.
+2023-08-29 21:55:09.753  INFO 10288 --- [http-nio-8080-exec-8] r.s.h.service.impl.UserServiceImpl       : Getting user by username user@gmail.com
+2023-08-29 21:55:09.325  INFO 10288 --- [http-nio-8080-exec-7] r.s.h.service.impl.AdsServiceImpl        : Geting Ads for selected user.
+2023-08-29 21:55:09.417  INFO 10288 --- [http-nio-8080-exec-4] r.s.h.service.impl.AdsServiceImpl        : Geting all ads.
+2023-08-29 21:55:12.624  INFO 10288 --- [http-nio-8080-exec-7] r.s.h.service.impl.AdsServiceImpl        : Received all ads for selected user.
+2023-08-29 21:55:12.791  INFO 10288 --- [http-nio-8080-exec-4] r.s.h.service.impl.AdsServiceImpl        : All ads get successful.
+2023-08-29 21:55:12.851  INFO 10288 --- [http-nio-8080-exec-8] r.s.h.service.impl.UserServiceImpl       : User received by username user@gmail.com
+2023-08-29 21:55:14.243  WARN 10288 --- [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required request part 'file' is not present]
+2023-08-29 22:11:40.418  INFO 10288 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-29 22:11:40.862  INFO 10288 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-29 22:11:41.385  INFO 10288 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-29 22:13:59.274  INFO 9632 --- [main] ru.skypro.homework.HomeworkApplication   : Starting HomeworkApplication using Java 11.0.20 on DESKTOP-F8RSPCQ with PID 9632 (C:\Users\JavaLearn\IdeaProjects\Ads-online-market\target\classes started by JavaLearn in C:\Users\JavaLearn\IdeaProjects\Ads-online-market)
+2023-08-29 22:13:59.289  INFO 9632 --- [main] ru.skypro.homework.HomeworkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-29 22:14:12.244  INFO 9632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-29 22:14:13.023  INFO 9632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 694 ms. Found 3 JPA repository interfaces.
+2023-08-29 22:14:18.078  INFO 9632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-29 22:14:18.143  INFO 9632 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-29 22:14:18.146  INFO 9632 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-29 22:14:20.220  INFO 9632 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-29 22:14:20.222  INFO 9632 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 20375 ms
+2023-08-29 22:14:22.251  INFO 9632 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-29 22:14:25.704  INFO 9632 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-29 22:14:28.802  INFO 9632 --- [main] liquibase.database                       : Set default schema name to public
+2023-08-29 22:14:30.692  INFO 9632 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2023-08-29 22:14:31.885  INFO 9632 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2023-08-29 22:14:32.288  INFO 9632 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2023-08-29 22:14:33.941  INFO 9632 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-29 22:14:35.437  INFO 9632 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-29 22:14:39.296  INFO 9632 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-29 22:14:40.358  INFO 9632 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-08-29 22:14:47.198  INFO 9632 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-29 22:14:47.261  INFO 9632 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-29 22:14:52.491  INFO 9632 --- [main] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2023-08-29 22:14:54.794  WARN 9632 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-29 22:15:02.547  INFO 9632 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4125bc3c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@28b47211, org.springframework.security.web.context.SecurityContextPersistenceFilter@74cf2d5f, org.springframework.security.web.header.HeaderWriterFilter@13b5598b, org.springframework.web.filter.CorsFilter@4abb4041, org.springframework.security.web.authentication.logout.LogoutFilter@13976c57, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5c59dfc7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3052395d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e577eed, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@247415be, org.springframework.security.web.session.SessionManagementFilter@57f6fc09, org.springframework.security.web.access.ExceptionTranslationFilter@395c21ee, org.springframework.security.web.access.intercept.AuthorizationFilter@2db82155]
+2023-08-29 22:15:04.813  INFO 9632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-29 22:15:04.896  INFO 9632 --- [main] ru.skypro.homework.HomeworkApplication   : Started HomeworkApplication in 69.54 seconds (JVM running for 79.377)
+2023-08-29 22:18:41.623  INFO 9632 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-29 22:18:41.873  INFO 9632 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-29 22:18:44.299  INFO 9632 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2343 ms
+2023-08-29 22:19:00.535  WARN 9632 --- [http-nio-8080-exec-4] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [4,584] milliseconds.
+2023-08-29 22:19:00.533  WARN 9632 --- [http-nio-8080-exec-3] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [4,508] milliseconds.
+2023-08-29 22:19:00.535  WARN 9632 --- [http-nio-8080-exec-6] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [4,594] milliseconds.
+2023-08-29 22:19:03.376  INFO 9632 --- [http-nio-8080-exec-3] r.s.h.service.impl.AdsServiceImpl        : Geting all ads.
+2023-08-29 22:19:03.344  INFO 9632 --- [http-nio-8080-exec-4] r.s.h.service.impl.AdsServiceImpl        : Geting Ads for selected user.
+2023-08-29 22:19:03.376  INFO 9632 --- [http-nio-8080-exec-6] r.s.h.service.impl.UserServiceImpl       : Getting user by username user@gmail.com
+2023-08-29 22:19:08.476  INFO 9632 --- [http-nio-8080-exec-4] r.s.h.service.impl.AdsServiceImpl        : Received all ads for selected user.
+2023-08-29 22:19:09.947  INFO 9632 --- [http-nio-8080-exec-6] r.s.h.service.impl.UserServiceImpl       : User received by username user@gmail.com
+2023-08-29 22:19:10.435  INFO 9632 --- [http-nio-8080-exec-3] r.s.h.service.impl.AdsServiceImpl        : All ads get successful.
+2023-08-29 22:20:36.935  INFO 9632 --- [http-nio-8080-exec-6] r.s.h.service.impl.UserServiceImpl       : Getting user by username user@gmail.com
+2023-08-29 22:20:36.871  INFO 9632 --- [http-nio-8080-exec-3] r.s.h.service.impl.AdsServiceImpl        : Geting all ads.
+2023-08-29 22:20:37.445  INFO 9632 --- [http-nio-8080-exec-2] r.s.h.service.impl.AdsServiceImpl        : Geting Ads for selected user.
+2023-08-29 22:20:38.434  INFO 9632 --- [http-nio-8080-exec-6] r.s.h.service.impl.UserServiceImpl       : User received by username user@gmail.com
+2023-08-29 22:20:38.619  INFO 9632 --- [http-nio-8080-exec-2] r.s.h.service.impl.AdsServiceImpl        : Received all ads for selected user.
+2023-08-29 22:20:38.739  INFO 9632 --- [http-nio-8080-exec-3] r.s.h.service.impl.AdsServiceImpl        : All ads get successful.
+2023-08-29 22:20:41.629  WARN 9632 --- [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required request part 'file' is not present]

@@ -75,8 +75,8 @@ public class AdsController {
     )
     @PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     @PreAuthorize("isAuthenticated")
-    public ResponseEntity<AdDto> addAds(@RequestBody AdDto ads,
-                                        @RequestPart MultipartFile file,
+    public ResponseEntity<AdDto> addAds(@RequestPart MultipartFile file,
+                                        @RequestPart AdDto ads,
                                         Authentication authentication) {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(adsService.addNewAd(file, ads, authentication));

@@ -20,6 +20,7 @@ import ru.skypro.homework.service.ImageService;
 import ru.skypro.homework.service.UserService;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 
@@ -80,7 +81,7 @@ public class AdsServiceImpl implements AdsService {
             ads.setAuthor(user);
             imageService.uploadImage(file);
             //todo доделать сохранение ссылки после создания эндпоинта
-//            ads.setImage(ads.getId().toString());
+            ads.setImage(UUID.randomUUID().toString());
             adsRepository.save(ads);
             log.info("New ads added and saved.");
             return adsMapper.toAdDto(ads);
