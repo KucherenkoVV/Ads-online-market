@@ -5,7 +5,7 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -18,17 +18,18 @@ import ru.skypro.homework.dto.ads.CreateOrUpdateAdDto;
 import ru.skypro.homework.dto.ads.ListAdsDto;
 import ru.skypro.homework.service.impl.AdsServiceImpl;
 
-import javax.validation.Valid;
-
-
-@CrossOrigin(value = "http://localhost:3000")
 @RestController
 @RequestMapping("/ads")
-@RequiredArgsConstructor
-@Tag(name = "Объявления")
+@CrossOrigin(value = "http://localhost:3000")
+@Tag(name = "Объявления", description = "AdsController")
 public class AdsController {
 
     private final AdsServiceImpl adsService;
+
+    @Autowired
+    public AdsController(AdsServiceImpl adsService) {
+        this.adsService = adsService;
+    }
 
     @Operation(
             summary = "Получить все объявления", tags = "Объявления",
@@ -42,26 +43,7 @@ public class AdsController {
     @GetMapping
     public ResponseEntity<ListAdsDto> getAllAds() {
 
-            return ResponseEntity.ok( adsService.getAllAds());
-    }
-    @Operation(
-            summary = "Добавить объявление", tags = "Объявления",
-            responses = {
-                    @ApiResponse(
-                            responseCode = "201", description = "Created",
-                            content = {@Content(mediaType = "application/json",
-                                    schema = @Schema(implementation = AdDto.class))}),
-                    @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content), //где получить?
-                    @ApiResponse(responseCode = "403", description = "Forbidden", content = @Content),
-                    @ApiResponse(responseCode = "404", description = "Not found", content = @Content)
-            }
-    )
-    @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<AdDto> addAds(@RequestPart("image") MultipartFile imageFile,
-                                         @RequestPart("properties") AdDto createAds,
-                                         Authentication authentication)  {
-        return ResponseEntity.status(HttpStatus.CREATED)
-                .body(adsService.addNewAd(imageFile, createAds, authentication));
+        return ResponseEntity.ok(adsService.getAllAds());
     }
 
     @Operation(
@@ -77,6 +59,28 @@ public class AdsController {
     public ResponseEntity<AdDto> getFullAd(@PathVariable("id") Integer id) {
 
         return ResponseEntity.ok(adsService.getAdFromId(id));
+    }
+
+    @Operation(
+            summary = "Добавить объявление", tags = "Объявления",
+            responses = {
+                    @ApiResponse(
+                            responseCode = "201", description = "Created",
+                            content = {@Content(mediaType = "application/json",
+                                    schema = @Schema(implementation = AdDto.class))}),
+                    @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content),
+                    @ApiResponse(responseCode = "403", description = "Forbidden", content = @Content),
+                    @ApiResponse(responseCode = "404", description = "Not found", content = @Content)
+            }
+    )
+    @PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+    @PreAuthorize("isAuthenticated")
+    public ResponseEntity<AdDto> addAds(@RequestBody AdDto ads,
+                                        @RequestPart MultipartFile file,
+                                        Authentication authentication) {
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .body(adsService.addNewAd(file, ads, authentication));
+//        return ResponseEntity.ok(adsService.addNewAd(file, ads, authentication));
     }
 
     @Operation(
@@ -153,3 +157,4 @@ public class AdsController {
         adsService.updateAdImage(id, multipartFile);
     }
 }
+

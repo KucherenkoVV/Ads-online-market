@@ -49,6 +49,18 @@ public class WebSecurityConfig {
     }
 
     @Bean
+    public JdbcUserDetailsManager userDetailsService(AuthenticationManagerBuilder auth, DataSource datasource) throws Exception {
+        JdbcUserDetailsManager jdbcUserDetailsManager = auth.jdbcAuthentication()
+                .passwordEncoder(new BCryptPasswordEncoder()).dataSource(datasource)
+                .usersByUsernameQuery("select username, password, enabled from users where username = ?")
+                .authoritiesByUsernameQuery("select username, authority from authorities where username = ?")
+                .getUserDetailsService();
+
+        return jdbcUserDetailsManager;
+
+    }
+
+    @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }

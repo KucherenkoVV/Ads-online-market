@@ -1,6 +1,7 @@
 package ru.skypro.homework.dto.user;
 
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;

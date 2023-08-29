@@ -3,6 +3,7 @@ package ru.skypro.homework.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import ru.skypro.homework.dto.auth.Role;
 
 import javax.persistence.*;
@@ -11,8 +12,7 @@ import java.util.List;
 
 @Entity
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+@RequiredArgsConstructor
 @Table(name = "users")
 public class User {
 
@@ -24,15 +24,12 @@ public class User {
     @Column(name = "username")
     private String username;
 
-    @NotNull
     @Column(name = "first_name")
     private String firstName;
 
-    @NotNull
     @Column(name = "last_name")
     private String lastName;
 
-    @NotNull
     @Column(name = "phone")
     private String phone;
 
@@ -46,6 +43,9 @@ public class User {
 
     @Column(name = "image")
     private String image;
+
+    @Column(name = "enabled")
+    private boolean enabled;
 
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
     private List<Ads> ads;

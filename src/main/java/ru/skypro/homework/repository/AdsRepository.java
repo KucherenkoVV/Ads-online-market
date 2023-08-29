@@ -16,5 +16,5 @@ public interface AdsRepository extends JpaRepository<Ads, Integer> {
     @Query(value = "SELECT a FROM Ads WHERE a.title LIKE %title%", nativeQuery = true)
     List<Ads> findByTitleLike(String title);
 
-    List<AdDto> findAllByAuthor_Username(String username);
+    List<Ads> findAllByAuthorUsername(String username);
 }

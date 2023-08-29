@@ -15,14 +15,6 @@ public interface AdsMapper {
 
     AdsMapper INSTANCE = Mappers.getMapper(AdsMapper.class);
 
-    @Mapping(target = "author", source = "author.id")
-    @Mapping(target = "pk", source = "id")
-    @Mapping(target = "image", source = "image")
-    @Mapping(target = "description", source = "description")
-    @Mapping(target = "title", source = "title")
-    @Mapping(target = "price", source = "price")
-    AdDto toAdDto(Ads ads);
-
     @Mapping(target = "pk", source = "id")
     @Mapping(target = "authorFirstName", source = "author.firstName")
     @Mapping(target = "authorLastName", source = "author.lastName")
@@ -38,6 +30,15 @@ public interface AdsMapper {
     @Mapping(target = "title", source = "title")
     @Mapping(target = "price", source = "price")
     CreateOrUpdateAdDto toCreatedOrUpdateAdDto (Ads ads);
+
+
+    @Mapping(target = "pk", source = "id")
+    @Mapping(target = "author", source = "author.id")
+    @Mapping(target = "image", source = "image")
+    @Mapping(target = "description", source = "description")
+    @Mapping(target = "title", source = "title")
+    @Mapping(target = "price", source = "price")
+    AdDto toAdDto(Ads ads);
 
 
     Ads toAdsEntityFromCreateOrUpdateDto(CreateOrUpdateAdDto createOrUpdateAdDto);
