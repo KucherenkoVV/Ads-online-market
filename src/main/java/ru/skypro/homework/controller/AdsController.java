@@ -1,6 +1,7 @@
 package ru.skypro.homework.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -15,8 +16,12 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import ru.skypro.homework.dto.ads.AdDto;
 import ru.skypro.homework.dto.ads.CreateOrUpdateAdDto;
+import ru.skypro.homework.dto.ads.ExtendedAdDto;
 import ru.skypro.homework.dto.ads.ListAdsDto;
+import ru.skypro.homework.model.Ads;
 import ru.skypro.homework.service.impl.AdsServiceImpl;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/ads")
@@ -36,12 +41,14 @@ public class AdsController {
             responses = {
                     @ApiResponse(
                             responseCode = "200", description = "OK",
-                            content = {@Content(mediaType = "application/json",
-                                    schema = @Schema(implementation = ListAdsDto.class))})
+                            content = @Content(
+                                    mediaType = MediaType.APPLICATION_JSON_VALUE,
+                                    array = @ArraySchema(schema = @Schema(implementation = AdDto.class)))
+                    )
             }
     )
     @GetMapping
-    public ResponseEntity<ListAdsDto> getAllAds() {
+    public ResponseEntity<List<AdDto>> getAllAds() {
 
         return ResponseEntity.ok(adsService.getAllAds());
     }
@@ -52,11 +59,11 @@ public class AdsController {
                     @ApiResponse(
                             responseCode = "200", description = "OK",
                             content = {@Content(mediaType = "application/json",
-                                    schema = @Schema(implementation = AdDto.class))})
+                                    schema = @Schema(implementation = ExtendedAdDto.class))})
             }
     )
     @GetMapping("/{id}")
-    public ResponseEntity<AdDto> getFullAd(@PathVariable("id") Integer id) {
+    public ResponseEntity<ExtendedAdDto> getFullAd(@PathVariable Integer id) {
 
         return ResponseEntity.ok(adsService.getAdFromId(id));
     }
@@ -75,12 +82,10 @@ public class AdsController {
     )
     @PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     @PreAuthorize("isAuthenticated")
-    public ResponseEntity<AdDto> addAds(@RequestPart("image") MultipartFile image,
-                                        @RequestPart AdDto ads,
-                                        Authentication authentication) {
-        return ResponseEntity.status(HttpStatus.CREATED)
-                .body(adsService.addNewAd(image, ads, authentication));
-//        return ResponseEntity.ok(adsService.addNewAd(file, ads, authentication));
+    public ResponseEntity<Ads> addAds(@RequestPart("image") MultipartFile image,
+                                      @RequestPart("properties") AdDto ads,
+                                      Authentication authentication) {
+        return ResponseEntity.ok(adsService.addNewAd(image, ads, authentication));
     }
 
     @Operation(

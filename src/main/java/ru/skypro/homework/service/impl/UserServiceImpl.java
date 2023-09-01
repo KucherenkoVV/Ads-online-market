@@ -18,6 +18,7 @@ import ru.skypro.homework.service.ImageService;
 import ru.skypro.homework.service.UserService;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Transactional
@@ -40,7 +41,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDto getUserById(Integer id) {
         log.info("Getting user by id {}.", id);
-        UserDto userDto = userMapper.toUserDto(userRepository.findById(id).orElseThrow());
+        UserDto userDto = userMapper.toUserDtoFromEntity(userRepository.findById(id).orElseThrow());
         log.info("User received.");
         return userDto;
     }
@@ -56,7 +57,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserDto> getAllUser() {
         log.info("Getting all users.");
-        List<UserDto> userDtoList = userMapper.toListUsersDto(userRepository.findAll());
+        List<UserDto> userDtoList = userRepository.findAll()
+                .stream()
+                .map(userMapper::toUserDtoFromEntity)
+                .collect(Collectors.toList());
         log.info("All user received.");
         return userDtoList;
     }
@@ -90,7 +94,7 @@ public class UserServiceImpl implements UserService {
             }
             userRepository.save(user);
             log.info("User details updated for user: {}", authentication.getName());
-            return userMapper.toUserDto(user);
+            return userMapper.toUserDtoFromEntity(user);
         } else {
             throw new EmptyArgumentException("Information for update User is not enough.");
         }

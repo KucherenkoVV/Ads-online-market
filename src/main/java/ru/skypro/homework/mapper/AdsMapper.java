@@ -1,51 +1,60 @@
 package ru.skypro.homework.mapper;
 
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.factory.Mappers;
+import org.springframework.stereotype.Component;
 import ru.skypro.homework.dto.ads.AdDto;
 import ru.skypro.homework.dto.ads.CreateOrUpdateAdDto;
 import ru.skypro.homework.dto.ads.ExtendedAdDto;
 import ru.skypro.homework.model.Ads;
 
-import java.util.Optional;
+@Component
+public class AdsMapper {
 
-@Mapper(componentModel = "spring")
-public interface AdsMapper {
+    public Ads toAdsFromDto (AdDto adDto) {
+        Ads ads = new Ads();
+        ads.setTitle(adDto.getTitle());
+        ads.setDescription(adDto.getDescription());
+        ads.setPrice(adDto.getPrice());
+        return ads;
+    }
 
-    AdsMapper INSTANCE = Mappers.getMapper(AdsMapper.class);
+    public AdDto toAdDtoFromEntity (Ads ads) {
+        AdDto adDto = new AdDto();
+        adDto.setPk(ads.getId());
+        adDto.setTitle(ads.getTitle());
+        adDto.setPrice(ads.getPrice());
+        adDto.setDescription(ads.getDescription());
+        adDto.setImage(ads.getImage());
+        return adDto;
+    }
 
-    @Mapping(target = "pk", source = "id")
-    @Mapping(target = "authorFirstName", source = "author.firstName")
-    @Mapping(target = "authorLastName", source = "author.lastName")
-    @Mapping(target = "phone", source = "author.phone")
-    @Mapping(target = "email", source = "author.username")
-    @Mapping(target = "image", source = "image")
-    @Mapping(target = "description", source = "description")
-    @Mapping(target = "title", source = "title")
-    @Mapping(target = "price", source = "price")
-    ExtendedAdDto toExtendedAdDto(Ads ads);
+    public CreateOrUpdateAdDto toCreateDtoFromEntity (Ads ads) {
+        CreateOrUpdateAdDto createDto = new CreateOrUpdateAdDto();
+        createDto.setTitle(ads.getTitle());
+        createDto.setDescription(ads.getDescription());
+        createDto.setPrice(ads.getPrice());
+        return createDto;
+    }
 
-    @Mapping(target = "description", source = "description")
-    @Mapping(target = "title", source = "title")
-    @Mapping(target = "price", source = "price")
-    CreateOrUpdateAdDto toCreatedOrUpdateAdDto (Ads ads);
+    public ExtendedAdDto toExtendedAdFromEntity (Ads ads) {
+        ExtendedAdDto extendedAdDto = new ExtendedAdDto();
+        extendedAdDto.setPk(ads.getId());
+        extendedAdDto.setAuthorFirstName(ads.getAuthor().getFirstName());
+        extendedAdDto.setAuthorLastName(ads.getAuthor().getLastName());
+        extendedAdDto.setDescription(ads.getDescription());
+        extendedAdDto.setEmail(ads.getAuthor().getUsername());
+        extendedAdDto.setPhone(ads.getAuthor().getPhone());
+        extendedAdDto.setImage(ads.getImage());
+        extendedAdDto.setTitle(ads.getTitle());
+        extendedAdDto.setPrice(ads.getPrice());
+        return extendedAdDto;
+    }
 
-
-    @Mapping(target = "pk", source = "id")
-    @Mapping(target = "author", source = "author.id")
-    @Mapping(target = "image", source = "image")
-    @Mapping(target = "description", source = "description")
-    @Mapping(target = "title", source = "title")
-    @Mapping(target = "price", source = "price")
-    AdDto toAdDto(Ads ads);
-
-
-    Ads toAdsEntityFromCreateOrUpdateDto(CreateOrUpdateAdDto createOrUpdateAdDto);
-
-    @Mapping(target = "author.id", source = "author")
-    @Mapping(target = "description", source = "description")
-    @Mapping(target = "title", source = "title")
-    @Mapping(target = "price", source = "price")
-    Ads toAdsEntityFromAdDto(AdDto adDto);
+    public Ads toEntityFromExtendedAd (ExtendedAdDto extend) {
+        Ads ads = new Ads();
+        ads.setTitle(extend.getTitle());
+        ads.setDescription(extend.getDescription());
+        ads.setTitle(extend.getTitle());
+        ads.setPrice(extend.getPrice());
+        return ads;
+    }
 }

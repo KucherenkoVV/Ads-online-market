@@ -2,25 +2,23 @@ package ru.skypro.homework.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 import ru.skypro.homework.dto.ads.AdDto;
 import ru.skypro.homework.dto.ads.CreateOrUpdateAdDto;
+import ru.skypro.homework.dto.ads.ExtendedAdDto;
 import ru.skypro.homework.dto.ads.ListAdsDto;
 import ru.skypro.homework.exception.EmptyArgumentException;
 import ru.skypro.homework.mapper.AdsMapper;
 import ru.skypro.homework.model.Ads;
-import ru.skypro.homework.model.User;
 import ru.skypro.homework.repository.AdsRepository;
 import ru.skypro.homework.service.AdsService;
 import ru.skypro.homework.service.ImageService;
 import ru.skypro.homework.service.UserService;
 
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 
@@ -43,19 +41,35 @@ public class AdsServiceImpl implements AdsService {
         this.adsMapper = adsMapper;
     }
 
+//    @Override
+//    public ListAdsDto getAllAds() {
+//        log.info("Geting all ads.");
+//        List<AdDto> list = adsRepository.findAll().stream().
+//                map(adsMapper::toAdDtoFromEntity)
+//                .collect(Collectors.toList());
+//        log.info("All ads get successful.");
+//
+//        ListAdsDto listAdsDto = new ListAdsDto();
+//        listAdsDto.setResults(list);
+//        listAdsDto.setCount(list.size());
+//        if (listAdsDto.getCount() != 0){
+//            return listAdsDto;
+//        } else {
+//            throw new EmptyArgumentException("List ads is empty.");
+//        }
+//    }
     @Override
-    public ListAdsDto getAllAds() {
+    public List<AdDto> getAllAds() {
         log.info("Geting all ads.");
         List<AdDto> list = adsRepository.findAll().stream().
-                map(adsMapper.INSTANCE::toAdDto)
+                map(adsMapper::toAdDtoFromEntity)
                 .collect(Collectors.toList());
-        log.info("All ads get successful.");
-
-        ListAdsDto listAdsDto = new ListAdsDto();
-            listAdsDto.setResults(list);
-            listAdsDto.setCount(list.size());
-
-        return listAdsDto;
+        if (list.size() != 0){
+            log.info("All ads get successful.");
+            return list;
+        } else {
+            throw new EmptyArgumentException("List ads is empty.");
+        }
     }
 
     @Override
@@ -63,39 +77,38 @@ public class AdsServiceImpl implements AdsService {
         log.info("Geting Ads for selected user.");
         List<AdDto> list = adsRepository.findAllByAuthorUsername(authentication.getName())
                 .stream()
-                .map(a -> adsMapper.toAdDto(a))
+                .map(adsMapper::toAdDtoFromEntity)
                 .collect(Collectors.toList());
         ListAdsDto listAdsDto = new ListAdsDto();
         listAdsDto.setCount(list.size());
         listAdsDto.setResults(list);
         log.info("Received all ads for selected user.");
-        return listAdsDto;
+        if(listAdsDto.getCount() != null) {
+            return listAdsDto;
+        } else {
+            throw new EmptyArgumentException("List ads for selected user is empty.");
+        }
     }
 
     @Override
-    public AdDto addNewAd(MultipartFile file, AdDto adDto, Authentication authentication) {
+    public Ads addNewAd(MultipartFile image, AdDto adDto, Authentication authentication) {
         log.info("Adding new ads.");
         if (!adDto.getTitle().isBlank() && adDto.getPrice() != 0) {
-            Ads ads = adsMapper.toAdsEntityFromAdDto(adDto);
-            User user = userService.getUserByUsername(authentication.getName());
-            ads.setAuthor(user);
-            imageService.uploadImage(file);
-            //todo доделать сохранение ссылки после создания эндпоинта
-            ads.setImage(UUID.randomUUID().toString());
-            adsRepository.save(ads);
-            log.info("New ads added and saved.");
-            return adsMapper.toAdDto(ads);
+            Ads ads = adsMapper.toAdsFromDto(adDto);
+            ads.setAuthor(userService.getUserByUsername(authentication.getName()));
+            imageService.uploadImage(image);
+            return adsRepository.save(ads);
         } else {
             throw new EmptyArgumentException("Information for new Ad is not enough");
         }
     }
 
     @Override
-    public AdDto getAdFromId(Integer id) {
+    public ExtendedAdDto getAdFromId(Integer id) {
         log.info("Getting ad from id.");
         Ads ads = adsRepository.findById(id).orElseThrow();
         log.info("Ad from id received.");
-        return adsMapper.toAdDto(ads);
+        return adsMapper.toExtendedAdFromEntity(ads);
     }
 
     @Override
@@ -121,7 +134,7 @@ public class AdsServiceImpl implements AdsService {
             }
             adsRepository.save(ads);
             log.info("Ad updated.");
-            return adsMapper.toCreatedOrUpdateAdDto(ads);
+            return adsMapper.toCreateDtoFromEntity(ads);
         } else {
             throw new EmptyArgumentException("Information for update is not enough");
         }

@@ -67,7 +67,7 @@ public class UserController {
     @GetMapping("/me")
     public ResponseEntity<UserDto> getUser(Authentication authentication) {
         User user = userService.getUserByUsername(authentication.getName());
-        UserDto userDto = userMapper.toUserDto(user);
+        UserDto userDto = userMapper.toUserDtoFromEntity(user);
         return ResponseEntity.ok(userDto);
 
     }

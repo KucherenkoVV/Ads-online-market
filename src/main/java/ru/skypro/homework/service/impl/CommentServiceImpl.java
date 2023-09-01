@@ -29,7 +29,8 @@ public class CommentServiceImpl implements CommentService {
     private final CommentsRepository commentsRepository;
     private final UserServiceImpl userService;
 
-    public CommentServiceImpl(AdsServiceImpl adsService, AdsMapper adsMapper, AdsCommentMapper adsCommentMapper, CommentsRepository commentsRepository, UserServiceImpl userService) {
+    public CommentServiceImpl(AdsServiceImpl adsService, AdsMapper adsMapper, AdsCommentMapper adsCommentMapper,
+                              CommentsRepository commentsRepository, UserServiceImpl userService) {
         this.adsService = adsService;
         this.adsMapper = adsMapper;
         this.adsCommentMapper = adsCommentMapper;
@@ -42,7 +43,7 @@ public class CommentServiceImpl implements CommentService {
         log.info("Get comment by ads id {}, commentId {}.", adsId, commentId);
         Comment comment = commentsRepository.findCommentByAds_IdAndId(adsId, commentId);
         log.info("Comment with ads id {} and commentId {} received.", adsId, commentId);
-        return adsCommentMapper.toDto(comment);
+        return adsCommentMapper.toCommentDtoFromEntity(comment);
     }
 
     @Override
@@ -50,7 +51,7 @@ public class CommentServiceImpl implements CommentService {
         log.info("Get all ads comments by ads id: {}.", id);
         List<AdsCommentDto> adsCommentDtoList = commentsRepository.findAllByAds_Id(id)
                 .stream()
-                .map(adsCommentMapper::toDto)
+                .map(adsCommentMapper::toCommentDtoFromEntity)
                 .collect(Collectors.toList());
         log.info("All ads received by ads id: {} .", id);
         return adsCommentDtoList;
@@ -60,15 +61,15 @@ public class CommentServiceImpl implements CommentService {
     public AdsCommentDto addCommentToAd(Integer id, AdsCommentDto commentDto, Authentication authentication) {
         log.info("Add comment to ads by id and new comment: {}.", id);
         if(!commentDto.getText().isBlank()){
-            Comment comment = adsCommentMapper.toEntity(commentDto);
+            Comment comment = adsCommentMapper.toEntityFromCommentDto(commentDto);
             User user = userService.getUserByUsername(authentication.getName());
             comment.setAuthor(user);
-            comment.setAds(adsMapper.toAdsEntityFromAdDto(
+            comment.setAds(adsMapper.toEntityFromExtendedAd(
                     adsService.getAdFromId(id)));
             comment.setCreatedAt(Instant.now());
             commentsRepository.save(comment);
             log.info("Comment add to Ads id {} successful.", id);
-            return adsCommentMapper.toDto(comment);
+            return adsCommentMapper.toCommentDtoFromEntity(comment);
         } else {
             throw new EmptyArgumentException("Empty comment text");
         }
@@ -77,7 +78,7 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public void removeCommentFromAd(Integer adsId, Integer commentId) {
         log.info("Removing comment id {} , from ads", commentId);
-        Comment comment = adsCommentMapper.toEntity(
+        Comment comment = adsCommentMapper.toEntityFromCommentDto(
                 getCommentById(adsId, commentId));
         commentsRepository.delete(comment);
         log.info("Comment removed.");
@@ -87,12 +88,12 @@ public class CommentServiceImpl implements CommentService {
     public AdsCommentDto updateComment(Integer adsId, Integer commentId, CreateOrUpdateAdsCommentDto commentDto) {
         log.info("Updating comment with id {} for ads: ", commentId);
         if(!commentDto.getText().isBlank()){
-            Comment comment = adsCommentMapper.toEntity(
+            Comment comment = adsCommentMapper.toEntityFromCommentDto(
                     getCommentById(adsId, commentId));
             comment.setText(commentDto.getText());
             commentsRepository.save(comment);
             log.info("Comment with id {} update successful", commentId);
-            return adsCommentMapper.toDto(comment);
+            return adsCommentMapper.toCommentDtoFromEntity(comment);
         } else {
             throw new EmptyArgumentException("Empty comment update text.");
         }
