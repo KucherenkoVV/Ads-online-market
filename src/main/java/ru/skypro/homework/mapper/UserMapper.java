@@ -14,6 +14,7 @@ public class UserMapper {
         user.setFirstName(userDto.getFirstName());
         user.setLastName(userDto.getLastName());
         user.setPhone(userDto.getPhone());
+        user.setImage(userDto.getImage());
         return user;
     }
 
@@ -24,6 +25,7 @@ public class UserMapper {
         userDto.setFirstName(user.getFirstName());
         userDto.setLastName(user.getLastName());
         userDto.setPhone(user.getPhone());
+        userDto.setImage(user.getImage());
         return userDto;
     }
 

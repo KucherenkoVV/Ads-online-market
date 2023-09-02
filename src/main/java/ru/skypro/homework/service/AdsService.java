@@ -22,6 +22,8 @@ public interface AdsService {
 
     ExtendedAdDto getAdFromId (Integer id);
 
+    Ads getAdsFromId(Integer id);
+
     void removeAdById (Integer id);
 
     CreateOrUpdateAdDto updateAd(Integer id, CreateOrUpdateAdDto createOrUpdateAdDto);

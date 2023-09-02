@@ -28,12 +28,12 @@ public class Comment {
     @Column(name = "text")
     private String text;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ads_id")
+    @ManyToOne
+    @JoinColumn(referencedColumnName = "id")
     private Ads ads;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "author_id")
+    @JoinColumn(referencedColumnName = "id")
     private User author;
 
 

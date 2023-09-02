@@ -6,9 +6,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.skypro.homework.dto.adsComment.AdsCommentDto;
 import ru.skypro.homework.dto.adsComment.CreateOrUpdateAdsCommentDto;
+import ru.skypro.homework.dto.adsComment.ListAdsCommentsDto;
 import ru.skypro.homework.exception.EmptyArgumentException;
 import ru.skypro.homework.mapper.AdsCommentMapper;
 import ru.skypro.homework.mapper.AdsMapper;
+import ru.skypro.homework.model.Ads;
 import ru.skypro.homework.model.Comment;
 import ru.skypro.homework.model.User;
 import ru.skypro.homework.repository.CommentsRepository;
@@ -41,20 +43,23 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public AdsCommentDto getCommentById(Integer adsId, Integer commentId) {
         log.info("Get comment by ads id {}, commentId {}.", adsId, commentId);
-        Comment comment = commentsRepository.findCommentByAds_IdAndId(adsId, commentId);
+        Comment comment = commentsRepository.findCommentByAdsIdAndId(adsId, commentId);
         log.info("Comment with ads id {} and commentId {} received.", adsId, commentId);
         return adsCommentMapper.toCommentDtoFromEntity(comment);
     }
 
     @Override
-    public List<AdsCommentDto> getAllComments(Integer id) {
+    public ListAdsCommentsDto getAllComments(Integer id) {
         log.info("Get all ads comments by ads id: {}.", id);
-        List<AdsCommentDto> adsCommentDtoList = commentsRepository.findAllByAds_Id(id)
+        List<AdsCommentDto> adsCommentDtoList = commentsRepository.findAllByAdsId(id)
                 .stream()
                 .map(adsCommentMapper::toCommentDtoFromEntity)
                 .collect(Collectors.toList());
+        ListAdsCommentsDto listAdsCommentsDto = new ListAdsCommentsDto();
+        listAdsCommentsDto.setResults(adsCommentDtoList);
+        listAdsCommentsDto.setCount(adsCommentDtoList.size());
         log.info("All ads received by ads id: {} .", id);
-        return adsCommentDtoList;
+        return listAdsCommentsDto;
     }
 
     @Override
@@ -64,9 +69,10 @@ public class CommentServiceImpl implements CommentService {
             Comment comment = adsCommentMapper.toEntityFromCommentDto(commentDto);
             User user = userService.getUserByUsername(authentication.getName());
             comment.setAuthor(user);
-            comment.setAds(adsMapper.toEntityFromExtendedAd(
-                    adsService.getAdFromId(id)));
+            Ads ads = adsService.getAdsFromId(id);
+            comment.setAds(ads);
             comment.setCreatedAt(Instant.now());
+            comment.setText(commentDto.getText());
             commentsRepository.save(comment);
             log.info("Comment add to Ads id {} successful.", id);
             return adsCommentMapper.toCommentDtoFromEntity(comment);

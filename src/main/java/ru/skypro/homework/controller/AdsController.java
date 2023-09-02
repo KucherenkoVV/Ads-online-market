@@ -81,7 +81,6 @@ public class AdsController {
             }
     )
     @PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
-//    @PreAuthorize("isAuthenticated")
     @PreAuthorize("hasRole('ROLE_ADMIN, ROLE_USER')")
     public ResponseEntity<Ads> addAds(@RequestPart("image") MultipartFile image,
                                       @RequestPart("properties") AdDto ads,
@@ -99,7 +98,6 @@ public class AdsController {
                     @ApiResponse(responseCode = "404", description = "Not found", content = @Content)
             }
     )
-//    @PreAuthorize("isAuthenticated()")
     @PreAuthorize("hasRole('ROLE_ADMIN, ROLE_USER')")
     @DeleteMapping("/{id}")
     public ResponseEntity<?> removeAd(@PathVariable("id") Integer id) {
@@ -120,7 +118,6 @@ public class AdsController {
                     @ApiResponse(responseCode = "404", description = "Not found", content = @Content)
             }
     )
-//    @PreAuthorize("isAuthenticated()")
     @PreAuthorize("hasRole('ROLE_ADMIN, ROLE_USER')")
     @PatchMapping("/{id}")
     public ResponseEntity<CreateOrUpdateAdDto> updateAds(@PathVariable("id") Integer id,
@@ -139,7 +136,6 @@ public class AdsController {
                     @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content)
             }
     )
-//    @PreAuthorize("isAuthenticated()")
     @PreAuthorize("hasRole('ROLE_ADMIN, ROLE_USER')")
     @GetMapping("/me")
     public ListAdsDto getAdsMe(Authentication authentication) {
@@ -158,7 +154,6 @@ public class AdsController {
                     @ApiResponse(responseCode = "404", description = "Not found", content = @Content)
             }
     )
-//    @PreAuthorize("isAuthenticated()")
     @PreAuthorize("hasRole('ROLE_ADMIN, ROLE_USER')")
     @PatchMapping(value = "/{id}/image", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public void updateAdsImage(@PathVariable("id") Integer id,

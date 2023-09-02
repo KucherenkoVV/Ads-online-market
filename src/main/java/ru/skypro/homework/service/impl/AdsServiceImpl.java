@@ -27,7 +27,6 @@ import java.util.stream.Collectors;
 @Service
 public class AdsServiceImpl implements AdsService {
 
-    // todo допилить сохранение ссылок на картинки
     private final UserService userService;
     private final ImageService imageService;
     private final AdsRepository adsRepository;
@@ -99,6 +98,14 @@ public class AdsServiceImpl implements AdsService {
     }
 
     @Override
+    public Ads getAdsFromId(Integer id) {
+        log.info("Get Ads from id");
+        Ads ads = adsRepository.findById(id).orElseThrow();
+        log.info("Ads from id received.");
+        return ads;
+    }
+
+    @Override
     public void removeAdById(Integer id) {
         log.info("Removing ad from id.");
         adsRepository.delete(adsRepository.findById(id).orElseThrow());
@@ -132,7 +139,6 @@ public class AdsServiceImpl implements AdsService {
         log.info("Update uploaded ad image from image id {} and new file.", id);
         Ads ads = adsRepository.findById(id).orElseThrow();
         imageService.uploadImage(ads, file);
-        ads.setImage("");
         log.info("Image for ad updated.");
     }
 }

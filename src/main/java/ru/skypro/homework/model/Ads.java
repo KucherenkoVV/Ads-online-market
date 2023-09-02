@@ -39,7 +39,7 @@ public class Ads {
     private String image;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "ads", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "ads", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Comment> comments;
 
 }

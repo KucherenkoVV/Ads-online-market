@@ -11,6 +11,6 @@ import java.util.Optional;
 @Component
 public interface CommentsRepository extends JpaRepository<Comment, Integer> {
 
-    Comment findCommentByAds_IdAndId(Integer adsId, Integer commentId);
-    List<Comment> findAllByAds_Id(Integer id);
+    Comment findCommentByAdsIdAndId(Integer adsId, Integer commentId);
+    List<Comment> findAllByAdsId(Integer id);
 }

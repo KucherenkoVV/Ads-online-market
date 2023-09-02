@@ -9,6 +9,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import ru.skypro.homework.dto.adsComment.AdsCommentDto;
 import ru.skypro.homework.dto.adsComment.CreateOrUpdateAdsCommentDto;
+import ru.skypro.homework.dto.adsComment.ListAdsCommentsDto;
 import ru.skypro.homework.service.impl.CommentServiceImpl;
 
 import java.util.ArrayList;
@@ -35,7 +36,7 @@ public class CommentController {
             }
     )
     @GetMapping("/{id}/comments")
-    public List<AdsCommentDto> getComments(@PathVariable("id") Integer id) {
+    public ListAdsCommentsDto getComments(@PathVariable("id") Integer id) {
 
         return commentService.getAllComments(id);
     }

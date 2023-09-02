@@ -46,7 +46,6 @@ public class UserController {
                     @ApiResponse(responseCode = "403", description = "Forbidden", content = @Content)
             }
     )
-//    @PreAuthorize("isAuthenticated()")
     @PreAuthorize("hasRole('ROLE_ADMIN, ROLE_USER')")
     @PostMapping("/set_password")
     public ResponseEntity<Void> setPassword(@RequestBody NewPassword newPassword, Authentication authentication) {
@@ -64,7 +63,6 @@ public class UserController {
                     @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content)
             }
     )
-//    @PreAuthorize("isAuthenticated()")
     @PreAuthorize("hasRole('ROLE_ADMIN, ROLE_USER')")
     @GetMapping("/me")
     public ResponseEntity<UserDto> getUser(Authentication authentication) {
@@ -85,7 +83,6 @@ public class UserController {
                     @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content)
             }
     )
-//    @PreAuthorize("isAuthenticated()")
     @PreAuthorize("hasRole('ROLE_ADMIN, ROLE_USER')")
     @PatchMapping("/me")
     public ResponseEntity<UserDto> updateUser(@RequestBody UpdateUserDto updateUserDto, Authentication authentication) {
@@ -100,7 +97,6 @@ public class UserController {
                     @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content)
             }
     )
-//    @PreAuthorize("isAuthenticated()")
     @PreAuthorize("hasRole('ROLE_ADMIN, ROLE_USER')")
     @PatchMapping(value = "/me/image", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<?> updateUserAvatar(@RequestPart("image") MultipartFile multipartFile, Authentication authentication)  {

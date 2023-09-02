@@ -15,6 +15,7 @@ public class AdsMapper {
         ads.setTitle(adDto.getTitle());
         ads.setDescription(adDto.getDescription());
         ads.setPrice(adDto.getPrice());
+        ads.setImage(adDto.getImage());
         return ads;
     }
 

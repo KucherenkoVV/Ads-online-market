@@ -13,6 +13,8 @@ import java.nio.file.Path;
 @CrossOrigin(value = "http://localhost:3000")
 public class ImageController {
 
+    @Value("${upload.path}")
+    private String path;
     @Value("${upload.ads.path}")
     private String imagePath;
     @Value("${upload.users.path}")
@@ -20,11 +22,11 @@ public class ImageController {
 
     @GetMapping("/users/{imageId}")
     public byte[] getUserImage (@PathVariable String imageId) throws IOException {
-        return Files.readAllBytes(Path.of(avatarPath + File.separator + imageId));
+        return Files.readAllBytes(Path.of(path+ avatarPath + File.separator + imageId));
     }
 
     @GetMapping("/ads/{imageId}")
     public byte[] getAdsImage (@PathVariable String imageId) throws IOException {
-        return Files.readAllBytes(Path.of(imagePath + File.separator + imageId));
+        return Files.readAllBytes(Path.of(path + imagePath + File.separator + imageId));
     }
 }
