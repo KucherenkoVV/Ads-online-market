@@ -1,7 +1,6 @@
 package ru.skypro.homework.dto.user;
 
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 @Data
 public class UserDto {

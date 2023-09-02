@@ -1,9 +1,6 @@
 package ru.skypro.homework.dto.adsComment;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 @Data
 public class AdsCommentDto {

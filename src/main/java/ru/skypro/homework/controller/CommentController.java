@@ -12,9 +12,6 @@ import ru.skypro.homework.dto.adsComment.CreateOrUpdateAdsCommentDto;
 import ru.skypro.homework.dto.adsComment.ListAdsCommentsDto;
 import ru.skypro.homework.service.impl.CommentServiceImpl;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @CrossOrigin(value = "http://localhost:3000")
 @RestController
 @RequestMapping("/ads")

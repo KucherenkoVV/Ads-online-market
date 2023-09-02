@@ -1,7 +1,6 @@
 package ru.skypro.homework.dto.adsComment;
 
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
