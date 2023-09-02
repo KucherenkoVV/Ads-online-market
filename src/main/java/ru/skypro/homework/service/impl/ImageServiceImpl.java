@@ -1,14 +1,15 @@
 package ru.skypro.homework.service.impl;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-import ru.skypro.homework.exception.IncorrectTypeOfFileException;
-import ru.skypro.homework.exception.UploadFileException;
+import ru.skypro.homework.model.Ads;
+import ru.skypro.homework.model.User;
 import ru.skypro.homework.service.ImageService;
 
 import java.io.*;
-import java.nio.file.Paths;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -16,17 +17,35 @@ import java.util.UUID;
 @Service
 public class ImageServiceImpl implements ImageService {
 
-    //    private final String filePath ="${upload.path}";
-    private final String filePath = "C:\\Users\\JavaLearn\\IdeaProjects\\Ads-online-market\\src\\main\\resources\\img\\";
+    @Value("${upload.path}")
+    private String path;
+    @Value("${upload.ads.path}")
+    private String imagePath;
+    @Value("${upload.users.path}")
+    private String avatarPath;
     private final String REGEX = ".+\\.(jpg|jpeg|png)";
 
 
     @Override
-    public void uploadImage(MultipartFile file) {
+    public void uploadImage(Ads ads, MultipartFile file) {
         log.info("Starting upload image.");
         String[] split = Objects.requireNonNull(file.getOriginalFilename()).split("\\.");
-        String end = UUID.randomUUID() + "." + split[split.length -1];
-        File bufferFile = new File(filePath + end);
+        String end = imagePath + UUID.randomUUID() + "." + split[split.length -1];
+        ads.setImage(end);
+        uploadFile(file, end);
+    }
+
+    @Override
+    public void uploadAvatar(User user, MultipartFile file) {
+        log.info("Starting upload image.");
+        String[] split = Objects.requireNonNull(file.getOriginalFilename()).split("\\.");
+        String end = avatarPath + UUID.randomUUID() + "." + split[split.length -1];
+        user.setImage(end);
+        uploadFile(file, end);
+    }
+
+    private void uploadFile(MultipartFile file, String end) {
+        File bufferFile = new File(path + end);
         if (file.getOriginalFilename().matches(REGEX)) {
             try (BufferedInputStream bis = new BufferedInputStream(file.getInputStream());
                  FileOutputStream fos = new FileOutputStream(bufferFile);
@@ -41,4 +60,6 @@ public class ImageServiceImpl implements ImageService {
             }
         }
     }
+
+
 }

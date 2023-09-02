@@ -41,32 +41,19 @@ public class AdsServiceImpl implements AdsService {
         this.adsMapper = adsMapper;
     }
 
-//    @Override
-//    public ListAdsDto getAllAds() {
-//        log.info("Geting all ads.");
-//        List<AdDto> list = adsRepository.findAll().stream().
-//                map(adsMapper::toAdDtoFromEntity)
-//                .collect(Collectors.toList());
-//        log.info("All ads get successful.");
-//
-//        ListAdsDto listAdsDto = new ListAdsDto();
-//        listAdsDto.setResults(list);
-//        listAdsDto.setCount(list.size());
-//        if (listAdsDto.getCount() != 0){
-//            return listAdsDto;
-//        } else {
-//            throw new EmptyArgumentException("List ads is empty.");
-//        }
-//    }
     @Override
-    public List<AdDto> getAllAds() {
+    public ListAdsDto getAllAds() {
         log.info("Geting all ads.");
         List<AdDto> list = adsRepository.findAll().stream().
                 map(adsMapper::toAdDtoFromEntity)
                 .collect(Collectors.toList());
-        if (list.size() != 0){
-            log.info("All ads get successful.");
-            return list;
+        log.info("All ads get successful.");
+
+        ListAdsDto listAdsDto = new ListAdsDto();
+        listAdsDto.setResults(list);
+        listAdsDto.setCount(list.size());
+        if (listAdsDto.getCount() != 0){
+            return listAdsDto;
         } else {
             throw new EmptyArgumentException("List ads is empty.");
         }
@@ -96,7 +83,7 @@ public class AdsServiceImpl implements AdsService {
         if (!adDto.getTitle().isBlank() && adDto.getPrice() != 0) {
             Ads ads = adsMapper.toAdsFromDto(adDto);
             ads.setAuthor(userService.getUserByUsername(authentication.getName()));
-            imageService.uploadImage(image);
+            imageService.uploadImage(ads,image);
             return adsRepository.save(ads);
         } else {
             throw new EmptyArgumentException("Information for new Ad is not enough");
@@ -144,8 +131,7 @@ public class AdsServiceImpl implements AdsService {
     public void updateAdImage(Integer id, MultipartFile file) {
         log.info("Update uploaded ad image from image id {} and new file.", id);
         Ads ads = adsRepository.findById(id).orElseThrow();
-        imageService.uploadImage(file);
-        //todo доделать сохранение ссылки на картинку после создания эндпоинта
+        imageService.uploadImage(ads, file);
         ads.setImage("");
         log.info("Image for ad updated.");
     }

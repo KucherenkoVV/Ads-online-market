@@ -14,7 +14,7 @@ public class ExtendedAdDto {
     private String email;
     private String image;
     private String phone;
-    private int price;
+    private Integer price;
     private String title;
 
 }

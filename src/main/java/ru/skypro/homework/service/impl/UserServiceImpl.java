@@ -105,8 +105,7 @@ public class UserServiceImpl implements UserService {
     public void updateUserAvatar(Authentication authentication, MultipartFile file) {
         log.info("Updating user avatar by name {} from new file.", authentication.getName());
         User user = getUserByUsername(authentication.getName());
-        imageService.uploadImage(file);
+        imageService.uploadAvatar(user, file);
         log.info("Avatar updated for user with name {}", authentication.getName());
-        // доделать сохранение ссылки пользователю после создания эндпоинта
     }
 }

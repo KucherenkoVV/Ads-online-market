@@ -5,6 +5,7 @@ import ru.skypro.homework.dto.ads.AdDto;
 import ru.skypro.homework.dto.ads.CreateOrUpdateAdDto;
 import ru.skypro.homework.dto.ads.ExtendedAdDto;
 import ru.skypro.homework.model.Ads;
+import ru.skypro.homework.model.User;
 
 @Component
 public class AdsMapper {
@@ -37,12 +38,13 @@ public class AdsMapper {
 
     public ExtendedAdDto toExtendedAdFromEntity (Ads ads) {
         ExtendedAdDto extendedAdDto = new ExtendedAdDto();
+        User user = ads.getAuthor();
         extendedAdDto.setPk(ads.getId());
-        extendedAdDto.setAuthorFirstName(ads.getAuthor().getFirstName());
-        extendedAdDto.setAuthorLastName(ads.getAuthor().getLastName());
+        extendedAdDto.setAuthorFirstName(user.getFirstName());
+        extendedAdDto.setAuthorLastName(user.getLastName());
         extendedAdDto.setDescription(ads.getDescription());
-        extendedAdDto.setEmail(ads.getAuthor().getUsername());
-        extendedAdDto.setPhone(ads.getAuthor().getPhone());
+        extendedAdDto.setEmail(user.getUsername());
+        extendedAdDto.setPhone(user.getPhone());
         extendedAdDto.setImage(ads.getImage());
         extendedAdDto.setTitle(ads.getTitle());
         extendedAdDto.setPrice(ads.getPrice());
