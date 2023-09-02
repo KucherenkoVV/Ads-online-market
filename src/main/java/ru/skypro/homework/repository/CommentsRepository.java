@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 import ru.skypro.homework.model.Comment;
 
 import java.util.List;
-import java.util.Optional;
 
 @Component
 public interface CommentsRepository extends JpaRepository<Comment, Integer> {
