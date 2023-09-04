@@ -43,15 +43,18 @@ public class AdsServiceImpl implements AdsService {
     @Override
     public ListAdsDto getAllAds() {
         log.info("Geting all ads.");
+
         List<AdDto> list = adsRepository.findAll().stream().
                 map(adsMapper::toAdDtoFromEntity)
                 .collect(Collectors.toList());
-        log.info("All ads get successful.");
 
         ListAdsDto listAdsDto = new ListAdsDto();
         listAdsDto.setResults(list);
         listAdsDto.setCount(list.size());
-        if (listAdsDto.getCount() != 0){
+
+        if (listAdsDto.getCount() != 0) {
+            log.info("All ads get successful.");
+
             return listAdsDto;
         } else {
             throw new EmptyArgumentException("List ads is empty.");
@@ -61,15 +64,19 @@ public class AdsServiceImpl implements AdsService {
     @Override
     public ListAdsDto getAdsMe(Authentication authentication) {
         log.info("Geting Ads for selected user.");
+
         List<AdDto> list = adsRepository.findAllByAuthorUsername(authentication.getName())
                 .stream()
                 .map(adsMapper::toAdDtoFromEntity)
                 .collect(Collectors.toList());
+
         ListAdsDto listAdsDto = new ListAdsDto();
         listAdsDto.setCount(list.size());
         listAdsDto.setResults(list);
+
         log.info("Received all ads for selected user.");
-        if(listAdsDto.getCount() != null) {
+
+        if (listAdsDto.getCount() != null) {
             return listAdsDto;
         } else {
             throw new EmptyArgumentException("List ads for selected user is empty.");
@@ -79,20 +86,21 @@ public class AdsServiceImpl implements AdsService {
     @Override
     public Ads addNewAd(MultipartFile image, AdDto adDto, Authentication authentication) {
         log.info("Adding new ads.");
-        if (!adDto.getTitle().isBlank() && adDto.getPrice() != 0) {
-            Ads ads = adsMapper.toAdsFromDto(adDto);
-            ads.setAuthor(userService.getUserByUsername(authentication.getName()));
-            imageService.uploadImage(ads,image);
-            return adsRepository.save(ads);
-        } else {
-            throw new EmptyArgumentException("Information for new Ad is not enough");
-        }
+
+        Ads ads = adsMapper.toAdsFromDto(adDto);
+        ads.setAuthor(userService.getUserByUsername(authentication.getName()));
+        imageService.uploadImage(ads, image);
+
+        log.info("New ads add success.");
+        return adsRepository.save(ads);
     }
 
     @Override
     public ExtendedAdDto getAdFromId(Integer id) {
         log.info("Getting ad from id.");
+
         Ads ads = adsRepository.findById(id).orElseThrow();
+
         log.info("Ad from id received.");
         return adsMapper.toExtendedAdFromEntity(ads);
     }
@@ -100,7 +108,9 @@ public class AdsServiceImpl implements AdsService {
     @Override
     public Ads getAdsFromId(Integer id) {
         log.info("Get Ads from id");
+
         Ads ads = adsRepository.findById(id).orElseThrow();
+
         log.info("Ads from id received.");
         return ads;
     }
@@ -108,37 +118,35 @@ public class AdsServiceImpl implements AdsService {
     @Override
     public void removeAdById(Integer id) {
         log.info("Removing ad from id.");
+
         adsRepository.delete(adsRepository.findById(id).orElseThrow());
+
         log.info("Ad removed.");
     }
 
     @Override
     public CreateOrUpdateAdDto updateAd(Integer id, CreateOrUpdateAdDto createOrUpdateAdDto) {
-        if (!createOrUpdateAdDto.getTitle().isBlank() || !createOrUpdateAdDto.getDescription().isBlank() || createOrUpdateAdDto.getPrice() != 0) {
-            log.info("Updating Ad from id {} and createOrUpdateAdDto.", id);
-            Ads ads = adsRepository.findById(id).orElseThrow();
-            if (createOrUpdateAdDto.getTitle() != null) {
-                ads.setTitle(createOrUpdateAdDto.getTitle());
-            }
-            if (createOrUpdateAdDto.getDescription() != null) {
-                ads.setDescription(createOrUpdateAdDto.getDescription());
-            }
-            if (createOrUpdateAdDto.getPrice() != 0) {
-                ads.setPrice(createOrUpdateAdDto.getPrice());
-            }
-            adsRepository.save(ads);
-            log.info("Ad updated.");
-            return adsMapper.toCreateDtoFromEntity(ads);
-        } else {
-            throw new EmptyArgumentException("Information for update is not enough");
-        }
+        log.info("Updating Ad from id {} and createOrUpdateAdDto.", id);
+        Ads ads = adsRepository.findById(id).orElseThrow();
+
+        ads.setTitle(createOrUpdateAdDto.getTitle());
+        ads.setDescription(createOrUpdateAdDto.getDescription());
+        ads.setPrice(createOrUpdateAdDto.getPrice());
+
+        adsRepository.save(ads);
+
+        log.info("Ad updated.");
+        return adsMapper.toCreateDtoFromEntity(ads);
     }
 
     @Override
     public void updateAdImage(Integer id, MultipartFile file) {
         log.info("Update uploaded ad image from image id {} and new file.", id);
+
         Ads ads = adsRepository.findById(id).orElseThrow();
+
         imageService.uploadImage(ads, file);
+
         log.info("Image for ad updated.");
     }
 }

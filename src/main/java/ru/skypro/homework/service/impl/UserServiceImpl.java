@@ -40,7 +40,9 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDto getUserById(Integer id) {
         log.info("Getting user by id {}.", id);
+
         UserDto userDto = userMapper.toUserDtoFromEntity(userRepository.findById(id).orElseThrow());
+
         log.info("User received.");
         return userDto;
     }
@@ -48,7 +50,9 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getUserByUsername(String username) {
         log.info("Getting user by username {}", username);
+
         User user = userRepository.findByUsernameIgnoreCase(username).orElseThrow();
+
         log.info("User received by username {}", username);
         return user;
     }
@@ -56,10 +60,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserDto> getAllUser() {
         log.info("Getting all users.");
+
         List<UserDto> userDtoList = userRepository.findAll()
                 .stream()
                 .map(userMapper::toUserDtoFromEntity)
                 .collect(Collectors.toList());
+
         log.info("All user received.");
         return userDtoList;
     }
@@ -67,10 +73,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public void updateUserPassword(NewPassword newPassword, Authentication authentication) {
         log.info("Updating user password by new password.");
+
         User user = getUserByUsername(authentication.getName());
+
         if (passwordEncoder.matches(newPassword.getCurrentPassword(), user.getPassword())) {
             user.setPassword(passwordEncoder.encode(newPassword.getNewPassword()));
+
             userRepository.save(user);
+
             log.info("Password updated for user: {}", authentication.getName());
         } else {
             throw new AuthentificationException("Password incorrect.");
@@ -80,31 +90,25 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDto updateUser(UpdateUserDto updateUserDto, Authentication authentication) {
         log.info("Updating user from UpdateUserDto.");
-        if (!updateUserDto.getFirstName().isBlank() || !updateUserDto.getLastName().isBlank() || !updateUserDto.getPhone().isBlank()) {
-            User user = getUserByUsername(authentication.getName());
-            if (updateUserDto.getFirstName() != null) {
-                user.setFirstName(updateUserDto.getFirstName());
-            }
-            if (updateUserDto.getLastName() != null) {
-                user.setLastName(updateUserDto.getLastName());
-            }
-            if (updateUserDto.getPhone() != null){
-                user.setPhone(updateUserDto.getPhone());
-            }
-            userRepository.save(user);
-            log.info("User details updated for user: {}", authentication.getName());
-            return userMapper.toUserDtoFromEntity(user);
-        } else {
-            throw new EmptyArgumentException("Information for update User is not enough.");
-        }
 
+        User user = getUserByUsername(authentication.getName());
+        user.setFirstName(updateUserDto.getFirstName());
+        user.setLastName(updateUserDto.getLastName());
+        user.setPhone(updateUserDto.getPhone());
+
+        userRepository.save(user);
+
+        log.info("User details updated for user: {}", authentication.getName());
+        return userMapper.toUserDtoFromEntity(user);
     }
 
     @Override
     public void updateUserAvatar(Authentication authentication, MultipartFile file) {
         log.info("Updating user avatar by name {} from new file.", authentication.getName());
+
         User user = getUserByUsername(authentication.getName());
         imageService.uploadAvatar(user, file);
+
         log.info("Avatar updated for user with name {}", authentication.getName());
     }
 }

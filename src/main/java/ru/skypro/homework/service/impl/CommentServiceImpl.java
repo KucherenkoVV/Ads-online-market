@@ -43,7 +43,9 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public AdsCommentDto getCommentById(Integer adsId, Integer commentId) {
         log.info("Get comment by ads id {}, commentId {}.", adsId, commentId);
+
         Comment comment = commentsRepository.findCommentByAdsIdAndId(adsId, commentId);
+
         log.info("Comment with ads id {} and commentId {} received.", adsId, commentId);
         return adsCommentMapper.toCommentDtoFromEntity(comment);
     }
@@ -51,6 +53,7 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public ListAdsCommentsDto getAllComments(Integer id) {
         log.info("Get all ads comments by ads id: {}.", id);
+
         List<AdsCommentDto> adsCommentDtoList = commentsRepository.findAllByAdsId(id)
                 .stream()
                 .map(adsCommentMapper::toCommentDtoFromEntity)
@@ -58,6 +61,7 @@ public class CommentServiceImpl implements CommentService {
         ListAdsCommentsDto listAdsCommentsDto = new ListAdsCommentsDto();
         listAdsCommentsDto.setResults(adsCommentDtoList);
         listAdsCommentsDto.setCount(adsCommentDtoList.size());
+
         log.info("All ads received by ads id: {} .", id);
         return listAdsCommentsDto;
     }
@@ -65,43 +69,44 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public AdsCommentDto addCommentToAd(Integer id, AdsCommentDto commentDto, Authentication authentication) {
         log.info("Add comment to ads by id and new comment: {}.", id);
-        if(!commentDto.getText().isBlank()){
-            Comment comment = adsCommentMapper.toEntityFromCommentDto(commentDto);
-            User user = userService.getUserByUsername(authentication.getName());
-            comment.setAuthor(user);
-            Ads ads = adsService.getAdsFromId(id);
-            comment.setAds(ads);
-            comment.setCreatedAt(Instant.now());
-            comment.setText(commentDto.getText());
-            commentsRepository.save(comment);
-            log.info("Comment add to Ads id {} successful.", id);
-            return adsCommentMapper.toCommentDtoFromEntity(comment);
-        } else {
-            throw new EmptyArgumentException("Empty comment text");
-        }
+
+        Comment comment = adsCommentMapper.toEntityFromCommentDto(commentDto);
+        User user = userService.getUserByUsername(authentication.getName());
+        comment.setAuthor(user);
+        Ads ads = adsService.getAdsFromId(id);
+        comment.setAds(ads);
+        comment.setCreatedAt(Instant.now());
+        comment.setText(commentDto.getText());
+
+        commentsRepository.save(comment);
+
+        log.info("Comment add to Ads id {} successful.", id);
+        return adsCommentMapper.toCommentDtoFromEntity(comment);
     }
 
     @Override
     public void removeCommentFromAd(Integer adsId, Integer commentId) {
         log.info("Removing comment id {} , from ads", commentId);
+
         Comment comment = adsCommentMapper.toEntityFromCommentDto(
                 getCommentById(adsId, commentId));
+
         commentsRepository.delete(comment);
+
         log.info("Comment removed.");
     }
 
     @Override
     public AdsCommentDto updateComment(Integer adsId, Integer commentId, CreateOrUpdateAdsCommentDto commentDto) {
         log.info("Updating comment with id {} for ads: ", commentId);
-        if(!commentDto.getText().isBlank()){
-            Comment comment = adsCommentMapper.toEntityFromCommentDto(
-                    getCommentById(adsId, commentId));
-            comment.setText(commentDto.getText());
-            commentsRepository.save(comment);
-            log.info("Comment with id {} update successful", commentId);
-            return adsCommentMapper.toCommentDtoFromEntity(comment);
-        } else {
-            throw new EmptyArgumentException("Empty comment update text.");
-        }
+
+        Comment comment = adsCommentMapper.toEntityFromCommentDto(
+                getCommentById(adsId, commentId));
+        comment.setText(commentDto.getText());
+
+        commentsRepository.save(comment);
+
+        log.info("Comment with id {} update successful", commentId);
+        return adsCommentMapper.toCommentDtoFromEntity(comment);
     }
 }

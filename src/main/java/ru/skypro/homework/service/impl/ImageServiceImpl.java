@@ -28,8 +28,9 @@ public class ImageServiceImpl implements ImageService {
     @Override
     public void uploadImage(Ads ads, MultipartFile file) {
         log.info("Starting upload image.");
+
         String[] split = Objects.requireNonNull(file.getOriginalFilename()).split("\\.");
-        String end = imagePath + UUID.randomUUID() + "." + split[split.length -1];
+        String end = imagePath + UUID.randomUUID() + "." + split[split.length - 1];
         ads.setImage(end);
         uploadFile(file, end);
     }
@@ -37,22 +38,27 @@ public class ImageServiceImpl implements ImageService {
     @Override
     public void uploadAvatar(User user, MultipartFile file) {
         log.info("Starting upload image.");
+
         String[] split = Objects.requireNonNull(file.getOriginalFilename()).split("\\.");
-        String end = avatarPath + UUID.randomUUID() + "." + split[split.length -1];
+        String end = avatarPath + UUID.randomUUID() + "." + split[split.length - 1];
         user.setImage(end);
         uploadFile(file, end);
     }
 
     private void uploadFile(MultipartFile file, String end) {
         File bufferFile = new File(path + end);
+
         if (file.getOriginalFilename().matches(REGEX)) {
+
             try (BufferedInputStream bis = new BufferedInputStream(file.getInputStream());
                  FileOutputStream fos = new FileOutputStream(bufferFile);
                  BufferedOutputStream bos = new BufferedOutputStream(fos)) {
                 byte[] buffer = new byte[1024];
+
                 while (bis.read(buffer) > 0) {
                     bos.write(buffer);
                 }
+
                 log.info("Image uploaded successful.");
             } catch (IOException e) {
                 throw new RuntimeException(e);
