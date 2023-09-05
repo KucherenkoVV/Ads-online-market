@@ -25,7 +25,7 @@ class AdsCommentMapperTest {
     }
 
     @Test
-    void toCommentDtoFromEntity() {
+    void shouldMapToCommentDtoFromEntity() {
 
         Comment comment = new Comment();
         comment.setId(1);
@@ -44,7 +44,7 @@ class AdsCommentMapperTest {
     }
 
     @Test
-    void toEntityFromCommentDto() {
+    void shouldMapToEntityFromCommentDto() {
 
         AdsCommentDto adsCommentDto = new AdsCommentDto();
         adsCommentDto.setPk(1);

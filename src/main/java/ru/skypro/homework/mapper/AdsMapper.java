@@ -51,13 +51,4 @@ public class AdsMapper {
         extendedAdDto.setPrice(ads.getPrice());
         return extendedAdDto;
     }
-
-    public Ads toEntityFromExtendedAd (ExtendedAdDto extend) {
-        Ads ads = new Ads();
-        ads.setTitle(extend.getTitle());
-        ads.setDescription(extend.getDescription());
-        ads.setTitle(extend.getTitle());
-        ads.setPrice(extend.getPrice());
-        return ads;
-    }
 }

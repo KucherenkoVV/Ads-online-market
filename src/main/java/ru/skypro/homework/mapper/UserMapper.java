@@ -29,20 +29,6 @@ public class UserMapper {
         return userDto;
     }
 
-    public UpdateUserDto toUpdateDtoFromEntity (User user) {
-        UpdateUserDto updateUserDto = new UpdateUserDto();
-        updateUserDto.setFirstName(user.getFirstName());
-        updateUserDto.setLastName(user.getLastName());
-        updateUserDto.setPhone(user.getPhone());
-        return updateUserDto;
-    }
 
-    public User toEntityFromUpdateUserDto (UpdateUserDto updateUserDto) {
-        User user = new User();
-        user.setFirstName(updateUserDto.getFirstName());
-        user.setLastName(updateUserDto.getLastName());
-        user.setPhone(updateUserDto.getPhone());
-        return user;
-    }
 
 }

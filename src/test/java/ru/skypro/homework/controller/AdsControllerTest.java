@@ -29,8 +29,6 @@ class AdsControllerTest {
     @Autowired
     private AdsRepository adsRepository;
     @Autowired
-    private ObjectMapper objectMapper;
-    @Autowired
     private PasswordEncoder encoder;
     @Autowired
     private UserRepository userRepository;
