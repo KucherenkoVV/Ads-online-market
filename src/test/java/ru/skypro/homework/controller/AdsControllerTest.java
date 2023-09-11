@@ -75,9 +75,9 @@ class AdsControllerTest {
         extendedAdDto = new ExtendedAdDto();
 
         createOrUpdateAdDto = new CreateOrUpdateAdDto();
-        createOrUpdateAdDto.setDescription("The characteristics of someone or something");
+        createOrUpdateAdDto.setDescription("description");
         createOrUpdateAdDto.setPrice(1);
-        createOrUpdateAdDto.setTitle("Dr");
+        createOrUpdateAdDto.setTitle("Title");
     }
 
     @AfterEach
