@@ -7,7 +7,6 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.skypro.homework.dto.adsComment.AdsCommentDto;
 import ru.skypro.homework.dto.adsComment.CreateOrUpdateAdsCommentDto;
 import ru.skypro.homework.dto.adsComment.ListAdsCommentsDto;
-import ru.skypro.homework.exception.EmptyArgumentException;
 import ru.skypro.homework.mapper.AdsCommentMapper;
 import ru.skypro.homework.mapper.AdsMapper;
 import ru.skypro.homework.model.Ads;
@@ -48,6 +47,16 @@ public class CommentServiceImpl implements CommentService {
 
         log.info("Comment with ads id {} and commentId {} received.", adsId, commentId);
         return adsCommentMapper.toCommentDtoFromEntity(comment);
+    }
+
+    @Override
+    public Comment getCommentEntityById(Integer adsId, Integer commentId) {
+        log.info("Get comment by ads id {}, commentId {}.", adsId, commentId);
+
+        Comment comment = commentsRepository.findCommentByAdsIdAndId(adsId, commentId);
+
+        log.info("Comment with ads id {} and commentId {} received.", adsId, commentId);
+        return comment;
     }
 
     @Override
@@ -100,8 +109,7 @@ public class CommentServiceImpl implements CommentService {
     public AdsCommentDto updateComment(Integer adsId, Integer commentId, CreateOrUpdateAdsCommentDto commentDto) {
         log.info("Updating comment with id {} for ads: ", commentId);
 
-        Comment comment = adsCommentMapper.toEntityFromCommentDto(
-                getCommentById(adsId, commentId));
+        Comment comment = getCommentEntityById(adsId, commentId);
         comment.setText(commentDto.getText());
 
         commentsRepository.save(comment);

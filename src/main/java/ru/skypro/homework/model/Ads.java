@@ -12,6 +12,7 @@ import java.util.List;
 @Setter
 @EqualsAndHashCode
 @RequiredArgsConstructor
+@AllArgsConstructor
 @Table(name = "ads")
 public class Ads {
 
