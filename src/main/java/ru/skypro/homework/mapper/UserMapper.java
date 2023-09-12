@@ -1,32 +1,34 @@
 package ru.skypro.homework.mapper;
 
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.factory.Mappers;
-import ru.skypro.homework.dto.auth.Register;
+import org.springframework.stereotype.Component;
+import ru.skypro.homework.dto.user.UpdateUserDto;
 import ru.skypro.homework.dto.user.UserDto;
 import ru.skypro.homework.model.User;
 
-import java.util.List;
+@Component
+public class UserMapper {
+
+    public User toEntityFromUserDto (UserDto userDto) {
+        User user = new User();
+        user.setUsername(userDto.getUsername());
+        user.setFirstName(userDto.getFirstName());
+        user.setLastName(userDto.getLastName());
+        user.setPhone(userDto.getPhone());
+        user.setImage(userDto.getImage());
+        return user;
+    }
+
+    public UserDto toUserDtoFromEntity (User user) {
+        UserDto userDto = new UserDto();
+        userDto.setId(user.getId());
+        userDto.setUsername(user.getUsername());
+        userDto.setFirstName(user.getFirstName());
+        userDto.setLastName(user.getLastName());
+        userDto.setPhone(user.getPhone());
+        userDto.setImage(user.getImage());
+        return userDto;
+    }
 
 
-@Mapper(componentModel = "spring")
-public interface UserMapper {
-
-    UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
-
-    @Mapping(target = "username", source = "username")
-    @Mapping(target = "password", source = "password")
-    User toEntityFromRegisterDto(Register register);
-
-    @Mapping(target = "id", source = "id")
-    @Mapping(target = "username", source = "username")
-    @Mapping(target = "firstName", source = "firstName")
-    @Mapping(target = "lastName", source = "lastName")
-    @Mapping(target = "phone", source = "phone")
-    @Mapping(target = "image", source = "image")
-    UserDto toUserDto(User user);
-
-    List<UserDto> toListUsersDto (List<User> list);
 
 }

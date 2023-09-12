@@ -1,8 +1,9 @@
 package ru.skypro.homework.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import ru.skypro.homework.dto.auth.Role;
 
 import javax.persistence.*;
@@ -11,8 +12,8 @@ import java.util.List;
 
 @Entity
 @Data
+@RequiredArgsConstructor
 @AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "users")
 public class User {
 
@@ -24,15 +25,12 @@ public class User {
     @Column(name = "username")
     private String username;
 
-    @NotNull
     @Column(name = "first_name")
     private String firstName;
 
-    @NotNull
     @Column(name = "last_name")
     private String lastName;
 
-    @NotNull
     @Column(name = "phone")
     private String phone;
 
@@ -47,10 +45,14 @@ public class User {
     @Column(name = "image")
     private String image;
 
-    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
+    @Column(name = "enabled")
+    private boolean enabled;
+
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonIgnore
     private List<Ads> ads;
 
-    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Comment> comments;
 
 }

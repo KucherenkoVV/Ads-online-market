@@ -5,20 +5,24 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import ru.skypro.homework.dto.ads.AdDto;
 import ru.skypro.homework.dto.ads.CreateOrUpdateAdDto;
+import ru.skypro.homework.dto.ads.ExtendedAdDto;
 import ru.skypro.homework.dto.ads.ListAdsDto;
+import ru.skypro.homework.model.Ads;
 
 import java.util.List;
 
 
 public interface AdsService {
 
-    List<AdDto> getAllAds();
+    ListAdsDto getAllAds();
 
     ListAdsDto getAdsMe(Authentication authentication);
 
-    AdDto addNewAd(MultipartFile file, AdDto adDto, Authentication authentication);
+    Ads addNewAd(MultipartFile file, AdDto adDto, Authentication authentication);
 
-    AdDto getAdFromId (Integer id);
+    ExtendedAdDto getAdFromId (Integer id);
+
+    Ads getAdsFromId(Integer id);
 
     void removeAdById (Integer id);
 

@@ -46,9 +46,9 @@ public class UserController {
                     @ApiResponse(responseCode = "403", description = "Forbidden", content = @Content)
             }
     )
-    @PreAuthorize("isAuthenticated()")
+    @PreAuthorize("hasRole('ROLE_ADMIN, ROLE_USER')")
     @PostMapping("/set_password")
-    public ResponseEntity<?> setPassword(@RequestBody NewPassword newPassword, Authentication authentication) {
+    public ResponseEntity<Void> setPassword(@RequestBody NewPassword newPassword, Authentication authentication) {
         userService.updateUserPassword(newPassword, authentication);
         return ResponseEntity.ok().build();
     }
@@ -63,11 +63,11 @@ public class UserController {
                     @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content)
             }
     )
-    @PreAuthorize("isAuthenticated()")
+    @PreAuthorize("hasRole('ROLE_ADMIN, ROLE_USER')")
     @GetMapping("/me")
-    public ResponseEntity<UserDto> getUser(UserDto userDto) {
-        User user = userService.getUserByUsername(userDto.getUsername());
-        userDto = userMapper.toUserDto(user);
+    public ResponseEntity<UserDto> getUser(Authentication authentication) {
+        User user = userService.getUserByUsername(authentication.getName());
+        UserDto userDto = userMapper.toUserDtoFromEntity(user);
         return ResponseEntity.ok(userDto);
 
     }
@@ -83,7 +83,7 @@ public class UserController {
                     @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content)
             }
     )
-    @PreAuthorize("isAuthenticated()")
+    @PreAuthorize("hasRole('ROLE_ADMIN, ROLE_USER')")
     @PatchMapping("/me")
     public ResponseEntity<UserDto> updateUser(@RequestBody UpdateUserDto updateUserDto, Authentication authentication) {
         UserDto userDto = userService.updateUser(updateUserDto, authentication);
@@ -97,11 +97,17 @@ public class UserController {
                     @ApiResponse(responseCode = "401", description = "Unauthorised", content = @Content)
             }
     )
-    @PreAuthorize("isAuthenticated()")
+    @PreAuthorize("hasRole('ROLE_ADMIN, ROLE_USER')")
     @PatchMapping(value = "/me/image", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<?> updateUserAvatar(@RequestPart("image") MultipartFile multipartFile, Authentication authentication)  {
         userService.updateUserAvatar(authentication, multipartFile);
         return ResponseEntity.ok().build();
+    }
+
+    @Operation(hidden = true)
+    @GetMapping(value = "/avatar/{id}", produces = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public String getAvatar (@PathVariable("id") Integer id) {
+        return id.toString();
     }
 }
 

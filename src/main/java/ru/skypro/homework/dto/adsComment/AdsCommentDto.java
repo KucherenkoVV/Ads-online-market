@@ -1,12 +1,10 @@
 package ru.skypro.homework.dto.adsComment;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
+import javax.validation.constraints.NotNull;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class AdsCommentDto {
 
     private Integer author;
@@ -14,6 +12,7 @@ public class AdsCommentDto {
     private String authorFirstName;
     private String createdAt;
     private Integer pk;
+    @NotNull
     private String text;
 
 }

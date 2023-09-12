@@ -1,18 +1,18 @@
 package ru.skypro.homework.dto.ads;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
+import javax.validation.constraints.NotNull;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class AdDto {
 
     private Integer author;
     private String image;
     private Integer pk;
+    @NotNull
     private int price;
+    @NotNull
     private String title;
     private String description;
 

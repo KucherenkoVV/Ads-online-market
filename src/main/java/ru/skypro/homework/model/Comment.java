@@ -1,8 +1,7 @@
 package ru.skypro.homework.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -10,8 +9,7 @@ import java.time.Instant;
 
 @Entity
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+@RequiredArgsConstructor
 @Table(name = "comment")
 public class Comment {
 
@@ -28,12 +26,12 @@ public class Comment {
     @Column(name = "text")
     private String text;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ads_id")
+    @ManyToOne
+    @JoinColumn(referencedColumnName = "id")
     private Ads ads;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "author_id")
+    @JoinColumn(referencedColumnName = "id")
     private User author;
 
 
