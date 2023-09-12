@@ -1,0 +1,18 @@
+package ru.skypro.homework.dto.ads;
+
+import lombok.Data;
+
+@Data
+public class ExtendedAdDto {
+
+    private Integer pk;
+    private String authorLastName;
+    private String authorFirstName;
+    private String description;
+    private String email;
+    private String image;
+    private String phone;
+    private Integer price;
+    private String title;
+
+}

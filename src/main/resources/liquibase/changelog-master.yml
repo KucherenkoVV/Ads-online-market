@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - include:
+      file: liquibase/init.sql
+
+
+
+
+
+
+
+
+
